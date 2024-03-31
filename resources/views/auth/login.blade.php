@@ -10,7 +10,7 @@
             <div class="px-3 py-6">
 
                 <!-- back button -->
-                <a href="landing-0.html" class="link-muted position-absolute top-0 start-0 p-2 d-inline-grid gap-auto-2">
+                <a href="/" class="link-muted position-absolute top-0 start-0 p-2 d-inline-grid gap-auto-2">
                     <svg class="rtl-flip" height="18px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"
                         fill="currentColor">
                         <path fill-rule="evenodd"
@@ -73,7 +73,7 @@
 
                         <!-- create account -->
                         <div class="text-center mt-4">
-                            <a href="account-full-signup-1.html" class="link-muted">
+                            <a href="/register" class="link-muted">
                                 Don't have an account yet?
                             </a>
                         </div>
