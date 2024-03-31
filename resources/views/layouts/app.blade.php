@@ -12,7 +12,7 @@
     <link rel="dns-prefetch" href="https://fonts.gstatic.com/">
     <link rel="preconnect" href="https://fonts.googleapis.com/">
     <link rel="preconnect" href="https://fonts.gstatic.com/">
-    <link rel="preload" href="assets/fonts/flaticon/Flaticon.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/flaticon/Flaticon.woff2" as="font" type="font/woff2" crossorigin>
 
     <link rel="stylesheet" href="/css/core.min.css">
 
@@ -34,7 +34,7 @@
 
         @include('components.footer')
 
-        <script src="assets/js/core.min.js"></script>
+        <script src="/js/core.min.js"></script>
 
     </div>
 
