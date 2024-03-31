@@ -32,6 +32,8 @@
 
         @yield('content')
 
+        @include('components.footer')
+
         <script src="assets/js/core.min.js"></script>
 
     </div>
