@@ -9,7 +9,7 @@
 
         <!-- sideba : logo -->
         <div class="py-2 px-3 mb-3 mt-1">
-            <a href="index.html">
+            <a href="/">
                 <img src="/images/logo/logo_dark.svg" width="110" height="60" alt="...">
             </a>
         </div>
@@ -20,7 +20,7 @@
                 <ul class="nav flex-column">
 
                     <li class="nav-item active">
-                        <a class="nav-link" href="index.html">
+                        <a class="nav-link" href="/">
                             <svg width="18px" height="18px" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
                                 class="bi bi-house-fill" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd"

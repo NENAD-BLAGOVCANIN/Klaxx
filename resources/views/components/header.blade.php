@@ -654,7 +654,7 @@
                                             <ul class="col-12 list-unstyled pt-3">
                                                 <li class="dropdown-divider"></li>
                                                 <li class="dropdown-item pt-1 pb-2">
-                                                    <a href="index.html#ecommerce"
+                                                    <a href="/#ecommerce"
                                                         class="dropdown-link text-muted d-flex align-items-center">
                                                         <span class="pe-2">Visual mode</span>
                                                         <svg width="18px" height="18px"
