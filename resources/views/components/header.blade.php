@@ -129,7 +129,7 @@
             Logo : height: 70px max
           -->
                 <a class="navbar-brand m-0" href="shop-index-1.html">
-                    <img src="assets/images/logo/logo_dark.svg" width="110" height="38" alt="...">
+                    <img src="/images/logo/logo_dark.svg" width="110" height="38" alt="...">
                 </a>
 
             </div>
@@ -402,7 +402,7 @@
 
                                 <!-- image -->
                                 <div class="ratio ratio-1x1 float-start mt-1 bg-cover"
-                                    style="width:40px; background-image:url(demo.files/images/unsplash/products/thumb_330/barrett-ward-fYYUgvHYgpU-unsplash-min.jpg)">
+                                    style="width:40px; background-image:url(/images/unsplash/products/thumb_330/barrett-ward-fYYUgvHYgpU-unsplash-min.jpg)">
                                 </div>
 
                                 <a href="#" class="small d-block link-normal">
@@ -420,7 +420,7 @@
                             <div class="p-3 border-top border-light">
 
                                 <div class="ratio ratio-1x1 float-start mt-1 bg-cover"
-                                    style="width:40px; background-image:url(demo.files/images/unsplash/products/thumb_330/hardik-sharma-CrPAvN29Nhs-unsplash-min.jpg)">
+                                    style="width:40px; background-image:url(/images/unsplash/products/thumb_330/hardik-sharma-CrPAvN29Nhs-unsplash-min.jpg)">
                                 </div>
 
                                 <a href="#" class="small d-block link-normal">
@@ -540,7 +540,7 @@
                 Logo : height: 70px max
               -->
                         <a class="navbar-brand" href="shop-index-1.html">
-                            <img src="assets/images/logo/logo_dark.svg" width="110" height="38"
+                            <img src="/images/logo/logo_dark.svg" width="110" height="38"
                                 alt="...">
                         </a>
 
@@ -674,9 +674,9 @@
 
                                     <!-- image -->
                                     <div class="col px-3 py-5 bg-cover position-relative overlay-dark overlay-opacity-4 text-white d-flex flex-column align-items-center justify-content-center"
-                                        style="background-image: url(demo.files/images/unsplash/portfolio/thumb_330/boxed-water-is-better-LWagu5WepHU-unsplash-min.jpg);">
+                                        style="background-image: url(/images/unsplash/portfolio/thumb_330/boxed-water-is-better-LWagu5WepHU-unsplash-min.jpg);">
 
-                                        <img src="assets/images/logo/logo_light.svg" width="110" height="38"
+                                        <img src="/images/logo/logo_light.svg" width="110" height="38"
                                             alt="...">
                                         <p class="m-0">Smarty Ecommerce</p>
 
@@ -1050,7 +1050,7 @@
                                                 <!-- best selling item -->
                                                 <a href="#" style="min-height:300px;"
                                                     class="d-block position-relative h-100 bg-cover overlay-dark overlay-opacity-3 overlay-opacity-4-hover text-white rounded lazy"
-                                                    data-background-image="demo.files/images/unsplash/portfolio/thumb_330/boxed-water-is-better-LWagu5WepHU-unsplash-min.jpg">
+                                                    data-background-image="/images/unsplash/portfolio/thumb_330/boxed-water-is-better-LWagu5WepHU-unsplash-min.jpg">
                                                     <div
                                                         class="position-absolute fw-medium top-0 p-3 p-lg-4 d-flex flex-column">
                                                         <span class="d-block text-uppercase small">Best Seller</span>
@@ -1115,7 +1115,7 @@
                                                 <!-- bst selling item -->
                                                 <a href="#" style="min-height:300px;"
                                                     class="d-block position-relative h-100 bg-cover overlay-dark overlay-opacity-3 overlay-opacity-4-hover text-white rounded lazy"
-                                                    data-background-image="demo.files/images/unsplash/products/plants/photo-1531982560660-d9d15efdbe49.jpeg">
+                                                    data-background-image="/images/unsplash/products/plants/photo-1531982560660-d9d15efdbe49.jpeg">
                                                     <div
                                                         class="position-absolute fw-medium top-0 p-3 p-lg-4 d-flex flex-column">
                                                         <span class="d-block text-uppercase small">Best Seller</span>
@@ -1155,7 +1155,7 @@
 
                                                 <!-- item -->
                                                 <div class="ratio ratio-4x3 bg-cover overlay-dark overlay-opacity-3 text-white rounded lazy"
-                                                    data-background-image="demo.files/images/unsplash/products/thumb_330/nikolai-chernichenko-oyr64kMIz98-unsplash-min.jpg">
+                                                    data-background-image="/images/unsplash/products/thumb_330/nikolai-chernichenko-oyr64kMIz98-unsplash-min.jpg">
                                                     <div
                                                         class="position-absolute fw-medium top-0 p-3 p-lg-4 text-center d-flex flex-column align-items-center justify-content-center">
                                                         <span class="d-block text-uppercase smaller">Home &
@@ -1172,7 +1172,7 @@
 
                                                 <!-- item -->
                                                 <div class="ratio ratio-4x3 bg-cover overlay-dark overlay-opacity-3 text-white rounded lazy"
-                                                    data-background-image="demo.files/images/unsplash/products/cosmetics/the-honest-company-jPQE61INdTg-unsplash-min.jpg">
+                                                    data-background-image="/images/unsplash/products/cosmetics/the-honest-company-jPQE61INdTg-unsplash-min.jpg">
                                                     <div
                                                         class="position-absolute fw-medium top-0 p-3 p-lg-4 text-center d-flex flex-column align-items-center justify-content-center">
                                                         <span class="d-block text-uppercase smaller">Women</span>
@@ -1188,7 +1188,7 @@
 
                                                 <!-- item -->
                                                 <div class="ratio ratio-4x3 bg-cover overlay-dark overlay-opacity-3 text-white rounded lazy"
-                                                    data-background-image="demo.files/images/unsplash/products/thumb_330/aidan-hancock-UtzrcidfCsk-unsplash-min.jpg">
+                                                    data-background-image="/images/unsplash/products/thumb_330/aidan-hancock-UtzrcidfCsk-unsplash-min.jpg">
                                                     <div
                                                         class="position-absolute fw-medium top-0 p-3 p-lg-4 text-center d-flex flex-column align-items-center justify-content-center">
                                                         <span class="d-block text-uppercase smaller">Apple</span>

@@ -160,7 +160,7 @@
 
             <!-- logo -->
             <span class="h--70 d-inline-flex align-items-center">
-                <img src="assets/images/logo/logo_dark.svg" width="110" height="38" alt="...">
+                <img src="/images/logo/logo_dark.svg" width="110" height="38" alt="...">
             </span>
 
             <p class="m-0 text-gray-500 fs-6">

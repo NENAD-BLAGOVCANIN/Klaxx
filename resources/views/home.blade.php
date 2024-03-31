@@ -18,7 +18,7 @@
 
                     <a href="#"
                         class="shadow-primary-xs d-block overlay-dark-hover overlay-opacity-3 bg-light bg-cover lazy"
-                        data-background-image="demo.files/images/unsplash/products/curology-wK0h-mlvfuc-unsplash.jpg">
+                        data-background-image="/images/unsplash/products/curology-wK0h-mlvfuc-unsplash.jpg">
 
                         <h3 class="fs-4 position-absolute bottom-0 w-100 p-4 fw-bold text-dark z-index-2 text-align-start">
                             New Arrivals
@@ -43,7 +43,7 @@
 
                             <a href="#"
                                 class="shadow-primary-xs d-block overlay-dark-hover overlay-opacity-3 bg-light bg-cover lazy"
-                                data-background-image="demo.files/images/unsplash/products/nikolai-chernichenko-oyr64kMIz98-unsplash-min.jpg">
+                                data-background-image="/images/unsplash/products/nikolai-chernichenko-oyr64kMIz98-unsplash-min.jpg">
 
                                 <h3
                                     class="fs-4 position-absolute bottom-0 w-100 p-4 fw-bold text-dark z-index-2 text-align-start">
@@ -64,7 +64,7 @@
 
                             <a href="#"
                                 class="shadow-primary-xs d-block overlay-dark-hover overlay-opacity-3 bg-light bg-cover lazy"
-                                data-background-image="demo.files/images/unsplash/products/aidan-hancock-EwKkZu18HPo-unsplash-min.jpg">
+                                data-background-image="/images/unsplash/products/aidan-hancock-EwKkZu18HPo-unsplash-min.jpg">
 
                                 <h3
                                     class="fs-4 position-absolute bottom-0 w-100 p-4 fw-bold text-dark z-index-2 text-align-start">
@@ -85,7 +85,7 @@
 
                             <a href="#"
                                 class="shadow-primary-xs d-block overlay-dark-hover overlay-opacity-3 bg-light bg-cover lazy"
-                                data-background-image="demo.files/images/unsplash/products/barrett-ward-BsxlZgY4jMM-unsplash-min.jpg">
+                                data-background-image="/images/unsplash/products/barrett-ward-BsxlZgY4jMM-unsplash-min.jpg">
 
                                 <h3
                                     class="fs-4 position-absolute bottom-0 w-100 p-4 fw-bold text-dark z-index-2 text-align-end">
@@ -130,7 +130,7 @@
 
                 <div class="col-12 col-sm-6 col-lg-3 d-flex py-2 py-sm-3 py-lg-4">
 
-                    <img width="60" height="60" class="lazy" data-src="demo.files/svg/ecommerce/money_bag.svg"
+                    <img width="60" height="60" class="lazy" data-src="/svg/ecommerce/money_bag.svg"
                         src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="...">
                     <div class="ps-3">
                         <h3 class="fs-5 mb-1">Money Back</h3>
@@ -142,7 +142,7 @@
                 <div class="col-12 col-sm-6 col-lg-3 d-flex py-2 py-sm-3 py-lg-4">
 
                     <img width="60" height="60" class="lazy"
-                        data-src="demo.files/svg/ecommerce/free-delivery-truck.svg"
+                        data-src="/svg/ecommerce/free-delivery-truck.svg"
                         src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="...">
                     <div class="ps-3">
                         <h3 class="fs-5 mb-1">Free Shipping</h3>
@@ -154,7 +154,7 @@
                 <div class="col-12 col-sm-6 col-lg-3 d-flex py-2 py-sm-3 py-lg-4">
 
                     <img width="60" height="60" class="lazy"
-                        data-src="demo.files/svg/ecommerce/24-hours-phone-service.svg"
+                        data-src="/svg/ecommerce/24-hours-phone-service.svg"
                         src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="...">
                     <div class="ps-3">
                         <h3 class="fs-5 mb-1">Free Support</h3>
@@ -168,7 +168,7 @@
                     <!-- link example -->
                     <a href="#" class="text-dark text-decoration-none d-flex">
 
-                        <img width="60" height="60" class="lazy" data-src="demo.files/svg/ecommerce/handshake.svg"
+                        <img width="60" height="60" class="lazy" data-src="/svg/ecommerce/handshake.svg"
                             src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="...">
                         <div class="ps-3">
                             <h3 class="fs-5 mb-1">Best Deal</h3>
@@ -224,7 +224,7 @@
                             <a href="#" class="btn-toggle btn bg-white shadow-lg btn-sm rounded-circle mb-2"
                                 data-bs-toggle="tooltip" data-bs-original-title="add to favourite"
                                 data-bs-placement="left"
-                                data-toggle-ajax-url-on="demo.files/php/demo.ajax_request.php?product_id=1&amp;action=add_to_favourite"
+                                data-toggle-ajax-url-on="/php/demo.ajax_request.php?product_id=1&amp;action=add_to_favourite"
                                 data-toast-success-message="Added to your favourite!"
                                 data-toast-success-position="bottom-center">
                                 <i class="fi fi-heart-slim"></i>
@@ -270,7 +270,7 @@
                             <!-- 3. with .bg-suprime (remove white bg and add a gray bg) -->
                             <figure class="text-center bg-gradient-radial-light rounded-top overflow-hidden">
                                 <img class="img-fluid bg-suprime opacity-9"
-                                    src="demo.files/images/unsplash/products/thumb_330/barrett-ward-pI1pPuGKuTQ-unsplash-min.jpg"
+                                    src="/images/unsplash/products/thumb_330/barrett-ward-pI1pPuGKuTQ-unsplash-min.jpg"
                                     alt="...">
                             </figure>
 
@@ -325,7 +325,7 @@
                             <a href="#" class="btn-toggle btn bg-white shadow-lg btn-sm rounded-circle mb-2"
                                 data-bs-toggle="tooltip" data-bs-original-title="add to favourite"
                                 data-bs-placement="left"
-                                data-toggle-ajax-url-on="demo.files/php/demo.ajax_request.php?product_id=1&amp;action=add_to_favourite"
+                                data-toggle-ajax-url-on="/php/demo.ajax_request.php?product_id=1&amp;action=add_to_favourite"
                                 data-toast-success-message="Added to your favourite!"
                                 data-toast-success-position="bottom-center">
                                 <i class="fi fi-heart-slim"></i>
@@ -371,7 +371,7 @@
                             <!-- 3. with .bg-suprime (remove white bg and add a gray bg) -->
                             <figure class="text-center bg-gradient-radial-light rounded-top overflow-hidden">
                                 <img class="img-fluid bg-suprime opacity-9"
-                                    src="demo.files/images/unsplash/products/thumb_330/barrett-ward-EImqPfdl9y8-unsplash-min.jpg"
+                                    src="/images/unsplash/products/thumb_330/barrett-ward-EImqPfdl9y8-unsplash-min.jpg"
                                     alt="...">
                             </figure>
 
@@ -426,7 +426,7 @@
                             <a href="#" class="btn-toggle btn bg-white shadow-lg btn-sm rounded-circle mb-2"
                                 data-bs-toggle="tooltip" data-bs-original-title="add to favourite"
                                 data-bs-placement="left"
-                                data-toggle-ajax-url-on="demo.files/php/demo.ajax_request.php?product_id=1&amp;action=add_to_favourite"
+                                data-toggle-ajax-url-on="/php/demo.ajax_request.php?product_id=1&amp;action=add_to_favourite"
                                 data-toast-success-message="Added to your favourite!"
                                 data-toast-success-position="bottom-center">
                                 <i class="fi fi-heart-slim"></i>
@@ -472,7 +472,7 @@
                             <!-- 3. with .bg-suprime (remove white bg and add a gray bg) -->
                             <figure class="text-center bg-gradient-radial-light rounded-top overflow-hidden">
                                 <img class="img-fluid bg-suprime opacity-9"
-                                    src="demo.files/images/unsplash/products/thumb_330/barrett-ward-BsxlZgY4jMM-unsplash-min.jpg"
+                                    src="/images/unsplash/products/thumb_330/barrett-ward-BsxlZgY4jMM-unsplash-min.jpg"
                                     alt="...">
                             </figure>
 
@@ -527,7 +527,7 @@
                             <a href="#" class="btn-toggle btn bg-white shadow-lg btn-sm rounded-circle mb-2"
                                 data-bs-toggle="tooltip" data-bs-original-title="add to favourite"
                                 data-bs-placement="left"
-                                data-toggle-ajax-url-on="demo.files/php/demo.ajax_request.php?product_id=1&amp;action=add_to_favourite"
+                                data-toggle-ajax-url-on="/php/demo.ajax_request.php?product_id=1&amp;action=add_to_favourite"
                                 data-toast-success-message="Added to your favourite!"
                                 data-toast-success-position="bottom-center">
                                 <i class="fi fi-heart-slim"></i>
@@ -573,7 +573,7 @@
                             <!-- 3. with .bg-suprime (remove white bg and add a gray bg) -->
                             <figure class="text-center bg-gradient-radial-light rounded-top overflow-hidden">
                                 <img class="img-fluid bg-suprime opacity-9"
-                                    src="demo.files/images/unsplash/products/thumb_330/aidan-hancock-LIFe9y3-HKE-unsplash-min.jpg"
+                                    src="/images/unsplash/products/thumb_330/aidan-hancock-LIFe9y3-HKE-unsplash-min.jpg"
                                     alt="...">
                             </figure>
 
@@ -641,7 +641,7 @@
                             <a href="#" class="btn-toggle btn bg-white shadow-lg btn-sm rounded-circle mb-2"
                                 data-bs-toggle="tooltip" data-bs-original-title="add to favourite"
                                 data-bs-placement="left"
-                                data-toggle-ajax-url-on="demo.files/php/demo.ajax_request.php?product_id=1&amp;action=add_to_favourite"
+                                data-toggle-ajax-url-on="/php/demo.ajax_request.php?product_id=1&amp;action=add_to_favourite"
                                 data-toast-success-message="Added to your favourite!"
                                 data-toast-success-position="bottom-center">
                                 <i class="fi fi-heart-slim"></i>
@@ -687,7 +687,7 @@
                             <!-- 3. with .bg-suprime (remove white bg and add a gray bg) -->
                             <figure class="text-center bg-gradient-radial-light rounded-top overflow-hidden">
                                 <img class="img-fluid bg-suprime opacity-9"
-                                    src="demo.files/images/unsplash/products/thumb_330/aidan-hancock-EwKkZu18HPo-unsplash-min.jpg"
+                                    src="/images/unsplash/products/thumb_330/aidan-hancock-EwKkZu18HPo-unsplash-min.jpg"
                                     alt="...">
                             </figure>
 
@@ -742,7 +742,7 @@
                             <a href="#" class="btn-toggle btn bg-white shadow-lg btn-sm rounded-circle mb-2"
                                 data-bs-toggle="tooltip" data-bs-original-title="add to favourite"
                                 data-bs-placement="left"
-                                data-toggle-ajax-url-on="demo.files/php/demo.ajax_request.php?product_id=1&amp;action=add_to_favourite"
+                                data-toggle-ajax-url-on="/php/demo.ajax_request.php?product_id=1&amp;action=add_to_favourite"
                                 data-toast-success-message="Added to your favourite!"
                                 data-toast-success-position="bottom-center">
                                 <i class="fi fi-heart-slim"></i>
@@ -788,7 +788,7 @@
                             <!-- 3. with .bg-suprime (remove white bg and add a gray bg) -->
                             <figure class="text-center bg-gradient-radial-light rounded-top overflow-hidden">
                                 <img class="img-fluid bg-suprime opacity-9"
-                                    src="demo.files/images/unsplash/products/thumb_330/aidan-hancock-UtzrcidfCsk-unsplash-min.jpg"
+                                    src="/images/unsplash/products/thumb_330/aidan-hancock-UtzrcidfCsk-unsplash-min.jpg"
                                     alt="...">
                             </figure>
 
@@ -843,7 +843,7 @@
                             <a href="#" class="btn-toggle btn bg-white shadow-lg btn-sm rounded-circle mb-2"
                                 data-bs-toggle="tooltip" data-bs-original-title="add to favourite"
                                 data-bs-placement="left"
-                                data-toggle-ajax-url-on="demo.files/php/demo.ajax_request.php?product_id=1&amp;action=add_to_favourite"
+                                data-toggle-ajax-url-on="/php/demo.ajax_request.php?product_id=1&amp;action=add_to_favourite"
                                 data-toast-success-message="Added to your favourite!"
                                 data-toast-success-position="bottom-center">
                                 <i class="fi fi-heart-slim"></i>
@@ -889,7 +889,7 @@
                             <!-- 3. with .bg-suprime (remove white bg and add a gray bg) -->
                             <figure class="text-center bg-gradient-radial-light rounded-top overflow-hidden">
                                 <img class="img-fluid bg-suprime opacity-9"
-                                    src="demo.files/images/unsplash/products/thumb_330/harpal-singh-KuvEVL7lXYQ-unsplash.jpg"
+                                    src="/images/unsplash/products/thumb_330/harpal-singh-KuvEVL7lXYQ-unsplash.jpg"
                                     alt="...">
                             </figure>
 
@@ -944,7 +944,7 @@
                             <a href="#" class="btn-toggle btn bg-white shadow-lg btn-sm rounded-circle mb-2"
                                 data-bs-toggle="tooltip" data-bs-original-title="add to favourite"
                                 data-bs-placement="left"
-                                data-toggle-ajax-url-on="demo.files/php/demo.ajax_request.php?product_id=1&amp;action=add_to_favourite"
+                                data-toggle-ajax-url-on="/php/demo.ajax_request.php?product_id=1&amp;action=add_to_favourite"
                                 data-toast-success-message="Added to your favourite!"
                                 data-toast-success-position="bottom-center">
                                 <i class="fi fi-heart-slim"></i>
@@ -990,7 +990,7 @@
                             <!-- 3. with .bg-suprime (remove white bg and add a gray bg) -->
                             <figure class="text-center bg-gradient-radial-light rounded-top overflow-hidden">
                                 <img class="img-fluid bg-suprime opacity-9"
-                                    src="demo.files/images/unsplash/products/thumb_330/harpal-singh-SBLT7JohtCo-unsplash.jpg"
+                                    src="/images/unsplash/products/thumb_330/harpal-singh-SBLT7JohtCo-unsplash.jpg"
                                     alt="...">
                             </figure>
 
@@ -1090,7 +1090,7 @@
                         <div class="col-6 col-md-5th d-flex align-items-center text-center">
                             <a href="#" class="w-100">
                                 <img style="max-height:60px;max-width:180px;" class="mx-3 my-5 lazy"
-                                    data-src="demo.files/svg/brands/adidas.svg"
+                                    data-src="/svg/brands/adidas.svg"
                                     src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
                                     alt="...">
                             </a>
@@ -1099,7 +1099,7 @@
                         <div class="col-6 col-md-5th d-flex align-items-center text-center">
                             <a href="#" class="w-100">
                                 <img style="max-height:60px;max-width:180px;" class="mx-3 my-5 lazy"
-                                    data-src="demo.files/svg/brands/xing.svg"
+                                    data-src="/svg/brands/xing.svg"
                                     src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
                                     alt="...">
                             </a>
@@ -1108,7 +1108,7 @@
                         <div class="col-6 col-md-5th d-flex align-items-center text-center">
                             <a href="#" class="w-100">
                                 <img style="max-height:60px;max-width:180px;" class="mx-3 my-5 lazy"
-                                    data-src="demo.files/svg/brands/chanel.svg"
+                                    data-src="/svg/brands/chanel.svg"
                                     src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
                                     alt="...">
                             </a>
@@ -1117,7 +1117,7 @@
                         <div class="col-6 col-md-5th d-flex align-items-center text-center">
                             <a href="#" class="w-100">
                                 <img style="max-height:60px;max-width:180px;" class="mx-3 my-5 lazy"
-                                    data-src="demo.files/svg/brands/jordan.svg"
+                                    data-src="/svg/brands/jordan.svg"
                                     src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
                                     alt="...">
                             </a>
@@ -1126,7 +1126,7 @@
                         <div class="col-6 col-md-5th d-flex align-items-center text-center">
                             <a href="#" class="w-100">
                                 <img style="max-height:60px;max-width:180px;" class="mx-3 my-5 lazy"
-                                    data-src="demo.files/svg/brands/levis.svg"
+                                    data-src="/svg/brands/levis.svg"
                                     src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
                                     alt="...">
                             </a>
@@ -1135,7 +1135,7 @@
                         <div class="col-6 col-md-5th d-flex align-items-center text-center">
                             <a href="#" class="w-100">
                                 <img style="max-height:60px;max-width:180px;" class="mx-3 my-5 lazy"
-                                    data-src="demo.files/svg/brands/lacoste.svg"
+                                    data-src="/svg/brands/lacoste.svg"
                                     src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
                                     alt="...">
                             </a>
@@ -1144,7 +1144,7 @@
                         <div class="col-6 col-md-5th d-flex align-items-center text-center">
                             <a href="#" class="w-100">
                                 <img style="max-height:60px;max-width:180px;" class="mx-3 my-5 lazy"
-                                    data-src="demo.files/svg/brands/hm.svg"
+                                    data-src="/svg/brands/hm.svg"
                                     src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
                                     alt="...">
                             </a>
@@ -1153,7 +1153,7 @@
                         <div class="col-6 col-md-5th d-flex align-items-center text-center">
                             <a href="#" class="w-100">
                                 <img style="max-height:60px;max-width:180px;" class="mx-3 my-5 lazy"
-                                    data-src="demo.files/svg/brands/american-apparel.svg"
+                                    data-src="/svg/brands/american-apparel.svg"
                                     src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
                                     alt="...">
                             </a>
@@ -1162,7 +1162,7 @@
                         <div class="col-6 col-md-5th d-flex align-items-center text-center">
                             <a href="#" class="w-100">
                                 <img style="max-height:60px;max-width:180px;" class="mx-3 my-5 lazy"
-                                    data-src="demo.files/svg/brands/nike-4.svg"
+                                    data-src="/svg/brands/nike-4.svg"
                                     src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
                                     alt="...">
                             </a>
@@ -1171,7 +1171,7 @@
                         <div class="col-6 col-md-5th d-flex align-items-center text-center">
                             <a href="#" class="w-100">
                                 <img style="max-height:60px;max-width:180px;" class="mx-3 my-5 lazy"
-                                    data-src="demo.files/svg/brands/bike.svg"
+                                    data-src="/svg/brands/bike.svg"
                                     src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
                                     alt="...">
                             </a>
@@ -1215,7 +1215,7 @@
 
                 <div class="col-12 col-sm-6 col-lg-3 d-flex py-2 py-sm-3 py-lg-4">
 
-                    <img width="60" height="60" class="lazy" data-src="demo.files/svg/ecommerce/money_bag.svg"
+                    <img width="60" height="60" class="lazy" data-src="/svg/ecommerce/money_bag.svg"
                         src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="...">
                     <div class="ps-3">
                         <h3 class="fs-5 mb-1">Money Back</h3>
@@ -1227,7 +1227,7 @@
                 <div class="col-12 col-sm-6 col-lg-3 d-flex py-2 py-sm-3 py-lg-4">
 
                     <img width="60" height="60" class="lazy"
-                        data-src="demo.files/svg/ecommerce/free-delivery-truck.svg"
+                        data-src="/svg/ecommerce/free-delivery-truck.svg"
                         src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="...">
                     <div class="ps-3">
                         <h3 class="fs-5 mb-1">Free Shipping</h3>
@@ -1239,7 +1239,7 @@
                 <div class="col-12 col-sm-6 col-lg-3 d-flex py-2 py-sm-3 py-lg-4">
 
                     <img width="60" height="60" class="lazy"
-                        data-src="demo.files/svg/ecommerce/24-hours-phone-service.svg"
+                        data-src="/svg/ecommerce/24-hours-phone-service.svg"
                         src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="...">
                     <div class="ps-3">
                         <h3 class="fs-5 mb-1">Free Support</h3>
@@ -1254,7 +1254,7 @@
                     <a href="#" class="text-dark text-decoration-none d-flex">
 
                         <img width="60" height="60" class="lazy"
-                            data-src="demo.files/svg/ecommerce/handshake.svg"
+                            data-src="/svg/ecommerce/handshake.svg"
                             src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
                             alt="...">
                         <div class="ps-3">
