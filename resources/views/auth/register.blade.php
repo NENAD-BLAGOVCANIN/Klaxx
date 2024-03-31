@@ -28,51 +28,50 @@
                         <form method="POST" action="{{ route('register') }}">
                             @csrf
 
-                            <!-- Name -->
-                            <div>
-                                <x-input-label for="name" :value="__('Name')" />
-                                <x-text-input id="name" class="block mt-1 w-full" type="text" name="name"
-                                    :value="old('name')" required autofocus autocomplete="name" />
-                                <x-input-error :messages="$errors->get('name')" class="mt-2" />
+                            <div class="form-floating mb-3">
+                                <input required type="text" class="form-control" id="name" placeholder="Full Name"
+                                    name="name">
+                                <label for="name">Full Name</label>
                             </div>
 
-                            <!-- Email Address -->
-                            <div class="mt-4">
-                                <x-input-label for="email" :value="__('Email')" />
-                                <x-text-input id="email" class="block mt-1 w-full" type="email" name="email"
-                                    :value="old('email')" required autocomplete="username" />
-                                <x-input-error :messages="$errors->get('email')" class="mt-2" />
+                            <x-input-error :messages="$errors->get('name')" class="mt-2" />
+
+
+                            <div class="form-floating mb-3">
+                                <input type="email" class="form-control" id="email" name="email"
+                                    placeholder="Email address" required autofocus autocomplete="username">
+                                <label for="account_email">Email address</label>
                             </div>
 
-                            <!-- Password -->
-                            <div class="mt-4">
-                                <x-input-label for="password" :value="__('Password')" />
+                            <x-input-error :messages="$errors->get('email')" class="mt-2" />
 
-                                <x-text-input id="password" class="block mt-1 w-full" type="password" name="password"
-                                    required autocomplete="new-password" />
-
-                                <x-input-error :messages="$errors->get('password')" class="mt-2" />
+                            <div class="form-floating mb-3">
+                                <input required type="password" class="form-control" id="password" placeholder="Password"
+                                    autocomplete="new-password" name="password">
+                                <label for="password">Password</label>
                             </div>
 
-                            <!-- Confirm Password -->
-                            <div class="mt-4">
-                                <x-input-label for="password_confirmation" :value="__('Confirm Password')" />
+                            <x-input-error :messages="$errors->get('password')" class="mt-2" />
 
-                                <x-text-input id="password_confirmation" class="block mt-1 w-full" type="password"
-                                    name="password_confirmation" required autocomplete="new-password" />
 
-                                <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
+                            <div class="form-floating mb-3">
+                                <input required type="password_confirmation" class="form-control" id="password_confirmation"
+                                    placeholder="Password" autocomplete="new-password" name="password_confirmation">
+                                <label for="password_confirmation">Password</label>
                             </div>
 
-                            <div class="flex items-center justify-end mt-4">
-                                <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                                    href="{{ route('login') }}">
-                                    {{ __('Already registered?') }}
-                                </a>
+                            <x-input-error :messages="$errors->get('password')" class="mt-2" />
 
-                                <x-primary-button class="ms-4">
-                                    {{ __('Register') }}
-                                </x-primary-button>
+                            <div class="d-grid mb-3">
+                                <button type="submit" class="btn btn-primary">
+                                    <span>Sign up</span>
+                                    <svg class="rtl-flip" height="18px" viewBox="0 0 16 16"
+                                        xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z">
+                                        </path>
+                                    </svg>
+                                </button>
                             </div>
                         </form>
 

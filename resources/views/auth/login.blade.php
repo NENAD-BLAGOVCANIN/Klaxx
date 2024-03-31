@@ -37,16 +37,18 @@
                             <x-input-error :messages="$errors->get('email')" class="mt-2" />
 
                             <div class="form-floating mb-3">
-                                <input required type="password" class="form-control" id="password" placeholder="Password" autocomplete="new-password" name="password">
+                                <input required type="password" class="form-control" id="password" placeholder="Password"
+                                    autocomplete="new-password" name="password">
                                 <label for="password">Password</label>
-              
-                                <!-- forgot -->
-                                <a href="account-full-signin-password-1.html" class="btn bg-transparent shadow-none link-muted position-absolute top-0 end-0 m-1">
-                                  Forgot
-                                </a>
-                              </div>
 
-                              <x-input-error :messages="$errors->get('password')" class="mt-2" />
+                                <!-- forgot -->
+                                <a href="account-full-signin-password-1.html"
+                                    class="btn bg-transparent shadow-none link-muted position-absolute top-0 end-0 m-1">
+                                    Forgot
+                                </a>
+                            </div>
+
+                            <x-input-error :messages="$errors->get('password')" class="mt-2" />
 
 
                             <!-- Remember Me -->
@@ -61,13 +63,16 @@
 
                             <div class="d-grid mb-3">
                                 <button type="submit" class="btn btn-primary">
-                                  <span>Sign in</span>
-                                  <svg class="rtl-flip" height="18px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
-                                    <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"></path>
-                                  </svg>
+                                    <span>Sign in</span>
+                                    <svg class="rtl-flip" height="18px" viewBox="0 0 16 16"
+                                        xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z">
+                                        </path>
+                                    </svg>
                                 </button>
-                              </div>
-            
+                            </div>
+
                         </form>
 
 
