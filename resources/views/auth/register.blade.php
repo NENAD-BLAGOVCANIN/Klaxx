@@ -55,7 +55,7 @@
 
 
                             <div class="form-floating mb-3">
-                                <input required type="password_confirmation" class="form-control" id="password_confirmation"
+                                <input required type="password" class="form-control" id="password_confirmation"
                                     placeholder="Password" autocomplete="new-password" name="password_confirmation">
                                 <label for="password_confirmation">Password</label>
                             </div>
