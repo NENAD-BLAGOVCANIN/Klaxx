@@ -65,6 +65,8 @@ return [
             'model' => env('AUTH_MODEL', App\Models\User::class),
         ],
 
+        Laravel\Socialite\SocialiteServiceProvider::class,
+
         // 'users' => [
         //     'driver' => 'database',
         //     'table' => 'users',
