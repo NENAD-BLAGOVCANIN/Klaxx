@@ -62,3 +62,6 @@ Route::middleware('auth')->group(function () {
 
 Route::get('/auth/google', [SocialController::class, 'redirectToGoogle']);
 Route::get('/auth/google/callback', [SocialController::class, 'handleGoogleCallback']);
+
+Route::get('/auth/facebook', [SocialController::class, 'redirectToFacebook']);
+Route::get('/auth/facebook/callback', [SocialController::class, 'handleFacebookCallback']);

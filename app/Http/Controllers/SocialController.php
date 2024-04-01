@@ -40,4 +40,41 @@ class SocialController extends Controller
         
     }
 
+    public function redirectToFacebook()
+    {
+        return \Laravel\Socialite\Facades\Socialite::driver('facebook')->redirect();
+    }
+
+
+    public function handleFacebookCallback()
+    {
+
+            $user = \Laravel\Socialite\Facades\Socialite::driver('facebook')->user();
+
+            if (!$user->email) {
+                $email = $user->id . "@example.com";
+            }
+            else{
+                $email = $user->email;
+            }
+
+            $existingUser = User::where('email', $email)->first();
+
+            if ($existingUser) {
+                \Illuminate\Support\Facades\Auth::login($existingUser);
+            } else {
+
+                $newUser = User::create([
+                    'name' => $user->name,
+                    'email' => $email,
+                    'password' => Hash::make(Str::random(10)),
+                ]);
+
+                \Illuminate\Support\Facades\Auth::login($newUser);
+            }
+
+            return redirect()->intended('/');
+        
+    }
+
 }
