@@ -599,7 +599,7 @@ button.swiper-pagination-bullet {
 .swiper-container:not(.swiper-btn-group).swiper-primary .swiper-button-prev {
   color: #fff !important;
   background-image: none !important;
-  background: #574fec !important; }
+  background: #3658BF !important; }
 
 .swiper-container:not(.swiper-btn-group).swiper-secondary .swiper-pagination-bullet-active,
 .swiper-container.swiper-secondary .swiper-pagination-progressbar .swiper-pagination-progressbar-fill,

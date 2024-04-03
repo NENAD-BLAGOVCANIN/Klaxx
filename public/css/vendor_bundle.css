@@ -111,7 +111,7 @@
   align-items: center; }
 
 .dd-handle:hover {
-  color: #574fec; }
+  color: #3658BF; }
 
 .dd-handle-custom > .dd-content {
   padding-left: 52px; }
@@ -161,7 +161,7 @@
   margin-right: 8px; }
 
 .nestable-options a:hover {
-  color: #574fec; }
+  color: #3658BF; }
 
 .dd-has-options > .dd-content.text-truncate,
 .dd-has-options > .dd-handle.text-truncate {

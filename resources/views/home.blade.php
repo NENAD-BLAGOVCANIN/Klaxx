@@ -10,7 +10,7 @@
 
             <!-- main title : SEO Purpose -->
             <h1 class="h5 mb-3 text-secondary text-center-xs fw-normal">
-                <span class="text-danger fw-medium">Smarty</span> #1 classifieds website in Europe &amp; Asia
+                #1 classifieds website in Europe &amp; Asia
             </h1>
 
             <form novalidate method="get" action="#" class="bs-validate bg-white rounded shadow-xs px-2 pb-3">
@@ -42,7 +42,7 @@
                     <div class="col-12 col-md-2">
                         <div class="px-2 pt-3 position-relative">
 
-                            <button type="submit" class="btn btn-lg btn-warning w-100">
+                            <button type="submit" class="btn btn-lg btn-primary w-100">
                                 <span class="px-2">Search</span>
                                 <i class="fi fi-arrow-end"></i>
                             </button>
@@ -59,7 +59,7 @@
             <div class="mt-6">
 
                 <h2 class="h5 mb-3 text-secondary fw-normal">
-                    <span class="text-danger fw-medium">2.178.322</span> items <span class="text-gray-500">/ explore by
+                    <span class="text-primary fw-medium">2.178.322</span> items <span class="text-gray-500">/ explore by
                         category</span>
                 </h2>
 

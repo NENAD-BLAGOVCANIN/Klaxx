@@ -9,7 +9,7 @@
 
                 <!-- logo -->
                 <span class="d-inline-flex align-items-center mb-4">
-                    <img src="/images/logo/logo_dark.svg" width="110" height="38" alt="...">
+                    <img src="/images/logo/logo_dark.svg" class="w-100" style="max-width: 185px !important" alt="...">
                 </span>
 
                 <div class="clearfix mb-4">

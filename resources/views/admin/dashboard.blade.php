@@ -485,7 +485,7 @@
 
                                 <!-- chart -->
                                 <div class="h--120 easypie d-inline-block position-relative z-index-1"
-                                    data-bar-color="#574fec" data-track-color="#eaeaea" data-scale-color="#cccccc"
+                                    data-bar-color="#3658BF" data-track-color="#eaeaea" data-scale-color="#cccccc"
                                     data-scale-length="0" data-line-width="10" data-line-cap="round" data-size="120"
                                     data-percent="61">
 

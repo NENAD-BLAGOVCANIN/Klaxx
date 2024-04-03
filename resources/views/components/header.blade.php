@@ -1,4 +1,4 @@
-<header id="header" class="shadow-xs bg-gradient-warning">
+<header id="header" class="shadow-md bg-white">
 
 
     <div class="container position-relative">
@@ -27,7 +27,7 @@
                 </button>
 
                 <a class="navbar-brand m-0" href="landing-0.html">
-                    <img src="/images/logo/logo_dark.svg" width="110" height="38" alt="...">
+                    <img src="/images/logo/logo_dark.svg" class="w-100" style="max-width: 165px !important" alt="...">
                 </a>
 
             </div>
@@ -189,7 +189,7 @@
                 @else
                     <li class="list-inline-item mx-1 dropdown">
 
-                        <a href="/register" class="btn btn-sm btn-pill btn-basic bg-white shadow rounded-circle-xs">
+                        <a href="/register" class="d-none d-lg-block btn btn-sm btn-pill btn-primary rounded-circle-xs">
 
                             <span class="px-2 d-none d-lg-inline-block">
                                 Sign Up
@@ -202,7 +202,7 @@
 
                         <a href="/login" class="btn btn-sm btn-pill btn-basic bg-transparent rounded-circle-xs">
 
-                            <span class="d-none d-lg-inline-block">
+                            <span class="d-block d-lg-inline-block">
                                 Login
                             </span>
 
