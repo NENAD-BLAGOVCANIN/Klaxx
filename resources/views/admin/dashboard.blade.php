@@ -10,7 +10,7 @@
         <!-- sideba : logo -->
         <div class="py-2 px-3 mb-3 mt-1">
             <a href="/">
-                <img src="/images/logo/logo_dark.svg" width="110" height="60" alt="...">
+                <img src="/images/logo/logo_dark.svg?v=2" width="110" height="60" alt="...">
             </a>
         </div>
 
