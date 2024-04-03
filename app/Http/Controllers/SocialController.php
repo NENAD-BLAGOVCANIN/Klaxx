@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Redirect;
 
 class SocialController extends Controller
 {
@@ -19,25 +21,25 @@ class SocialController extends Controller
     public function handleGoogleCallback()
     {
 
-            $user = \Laravel\Socialite\Facades\Socialite::driver('google')->user();
+        $user = \Laravel\Socialite\Facades\Socialite::driver('google')->user();
 
-            $existingUser = User::where('email', $user->email)->first();
+        $existingUser = User::where('email', $user->email)->first();
 
-            if ($existingUser) {
-                \Illuminate\Support\Facades\Auth::login($existingUser);
-            } else {
+        if ($existingUser) {
+            \Illuminate\Support\Facades\Auth::login($existingUser);
+        } else {
 
-                $newUser = User::create([
-                    'name' => $user->user['given_name'],
-                    'email' => $user->email,
-                    'password' => Hash::make(Str::random(10)),
-                ]);
+            $newUser = User::create([
+                'name' => $user->user['given_name'],
+                'email' => $user->email,
+                'password' => Hash::make(Str::random(10)),
+            ]);
 
-                \Illuminate\Support\Facades\Auth::login($newUser);
-            }
+            \Illuminate\Support\Facades\Auth::login($newUser);
+        }
 
-            return redirect()->intended('/');
-        
+        return redirect()->intended('/');
+
     }
 
     public function redirectToFacebook()
@@ -49,12 +51,12 @@ class SocialController extends Controller
     public function handleFacebookCallback()
     {
 
+        try {
             $user = \Laravel\Socialite\Facades\Socialite::driver('facebook')->user();
 
             if (!$user->email) {
                 $email = $user->id . "@example.com";
-            }
-            else{
+            } else {
                 $email = $user->email;
             }
 
@@ -74,7 +76,13 @@ class SocialController extends Controller
             }
 
             return redirect()->intended('/');
-        
+        } catch (\Exception $e) {
+            $errorMessage = $e->getMessage();
+            Session::flash('error', $errorMessage);
+            return Redirect::back();
+        }
+
+
     }
 
 }
