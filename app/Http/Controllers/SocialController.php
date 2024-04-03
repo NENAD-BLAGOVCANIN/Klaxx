@@ -7,7 +7,6 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
-use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Redirect;
 
 class SocialController extends Controller
@@ -78,8 +77,7 @@ class SocialController extends Controller
             return redirect()->intended('/');
         } catch (\Exception $e) {
             $errorMessage = $e->getMessage();
-            Session::flash('error', $errorMessage);
-            return Redirect::back();
+            dd($errorMessage);
         }
 
 
