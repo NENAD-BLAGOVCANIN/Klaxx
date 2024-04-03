@@ -96,7 +96,7 @@
                         </div>
 
                         <div class="w-100 d-inline-grid gap-auto-3">
-                            <a href="/auth/google" class="btn bg-white border w-100 mx-0 text-gray-700">
+                            <a href="/auth/facebook" class="btn bg-white border w-100 mx-0 text-gray-700">
                                 <svg height="18px" viewBox="0 0 320 512" xmlns="http://www.w3.org/2000/svg"
                                     fill="currentColor">
                                     <path
