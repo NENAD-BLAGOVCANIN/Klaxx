@@ -10,7 +10,10 @@ class ListingsController extends Controller
 {
     public function myListings(Request $request)
     {
-        return view('listings.myListings');
+
+        $listings = Listing::where('user_id', auth()->user()->id)->get();
+
+        return view('listings.myListings', compact('listings'));
     }
     public function create(Request $request)
     {
