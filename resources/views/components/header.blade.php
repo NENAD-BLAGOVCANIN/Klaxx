@@ -27,7 +27,8 @@
                 </button>
 
                 <a class="navbar-brand m-0" href="landing-0.html">
-                    <img src="/images/logo/logo_dark.svg?v=2" class="w-100" style="max-width: 165px !important" alt="...">
+                    <img src="/images/logo/logo_dark.svg?v=2" class="w-100" style="max-width: 165px !important"
+                        alt="...">
                 </a>
 
             </div>
@@ -116,10 +117,10 @@
                             style="min-width:215px;">
 
                             <div class="dropdown-header px-4 mb-1 text-wrap fw-medium">John Doe</div>
-							<div class="dropdown-divider mb-3"></div>
-							<a class="dropdown-item" href="/admin/dashboard">
-                                <svg class="text-gray-600 float-start" width="18px" height="18px"
-                                    viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+                            <div class="dropdown-divider mb-3"></div>
+                            <a class="dropdown-item" href="/admin/dashboard">
+                                <svg class="text-gray-600 float-start" width="18px" height="18px" viewBox="0 0 16 16"
+                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor">
                                     <path fill-rule="evenodd"
                                         d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z">
                                     </path>
@@ -131,8 +132,8 @@
                             </a>
                             <div class="dropdown-divider mb-3"></div>
                             <a class="dropdown-item active" href="account-index.html">
-                                <svg class="text-gray-600 float-start" width="18px" height="18px" viewBox="0 0 16 16"
-                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+                                <svg class="text-gray-600 float-start" width="18px" height="18px"
+                                    viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
                                     <path fill-rule="evenodd"
                                         d="M8 3.293l6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6zm5-.793V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z">
                                     </path>
@@ -189,7 +190,8 @@
                 @else
                     <li class="list-inline-item mx-1 dropdown">
 
-                        <a href="/register" class="d-none d-lg-block btn btn-sm btn-pill btn-primary rounded-circle-xs">
+                        <a href="/register"
+                            class="d-none d-lg-block btn btn-sm btn-pill btn-primary rounded-circle-xs">
 
                             <span class="px-2 d-none d-lg-inline-block">
                                 Sign Up
@@ -266,305 +268,21 @@
                                     <div class="row col-border-md">
 
                                         <div class="col-12 col-md-3">
-
-                                            <h3 class="h6 mb-3">
-                                                Properties : <span class="text-danger">Sale</span>
-                                            </h3>
-                                            <ul class="prefix-link-icon prefix-icon-line">
-
-                                                <li class="dropdown-item">
-                                                    <a class="dropdown-link"
-                                                        href="niche.classifieds-category.html">Houses</a>
-                                                </li>
-
-                                                <li class="dropdown-item">
-                                                    <a class="dropdown-link"
-                                                        href="niche.classifieds-category.html">Apartments</a>
-                                                </li>
-
-                                                <li class="dropdown-item">
-                                                    <a class="dropdown-link"
-                                                        href="niche.classifieds-category.html">Lands &amp; Plots</a>
-                                                </li>
-
-                                                <li class="dropdown-item">
-                                                    <a class="dropdown-link"
-                                                        href="niche.classifieds-category.html">Offices</a>
-                                                </li>
-
-                                            </ul>
-
-
-                                            <h3 class="h6 mb-3 mt-4">
-                                                Properties : <span class="text-danger">Rent</span>
-                                            </h3>
-                                            <ul class="prefix-link-icon prefix-icon-line">
-
-                                                <li class="dropdown-item">
-                                                    <a class="dropdown-link"
-                                                        href="niche.classifieds-category.html">Houses</a>
-                                                </li>
-
-                                                <li class="dropdown-item">
-                                                    <a class="dropdown-link"
-                                                        href="niche.classifieds-category.html">Apartments</a>
-                                                </li>
-
-                                                <li class="dropdown-item">
-                                                    <a class="dropdown-link"
-                                                        href="niche.classifieds-category.html">Lands &amp; Plots</a>
-                                                </li>
-
-                                                <li class="dropdown-item">
-                                                    <a class="dropdown-link"
-                                                        href="niche.classifieds-category.html">Offices</a>
-                                                </li>
-
-                                            </ul>
-
-                                            <h3 class="h6 mb-3 mt-4">
-                                                Cars
-                                            </h3>
-                                            <ul class="prefix-link-icon prefix-icon-line">
-
-                                                <li class="dropdown-item">
-                                                    <a class="dropdown-link"
-                                                        href="niche.classifieds-category.html">Sale</a>
-                                                </li>
-
-                                                <li class="dropdown-item">
-                                                    <a class="dropdown-link"
-                                                        href="niche.classifieds-category.html">Commercial Vehicles</a>
-                                                </li>
-
-                                                <li class="dropdown-item">
-                                                    <a class="dropdown-link"
-                                                        href="niche.classifieds-category.html">Spare Parts</a>
-                                                </li>
-
-                                            </ul>
-
+                                            @foreach ($categories as $category)
+                                                <h3 class="h6 mb-3">
+                                                    {{ $category->name }}
+                                                </h3>
+                                                <ul class="prefix-link-icon prefix-icon-line">
+                                                    @foreach ($category->subcategories as $subcategory)
+                                                        <li class="dropdown-item">
+                                                            <a class="dropdown-link"
+                                                                href="{{ route('category.show', $subcategory->id) }}">{{ $subcategory->name }}</a>
+                                                        </li>
+                                                    @endforeach
+                                                </ul>
+                                            @endforeach
                                         </div>
 
-                                        <div class="col-12 col-md-3">
-
-                                            <h3 class="h6 mb-3">
-                                                Electronics
-                                            </h3>
-                                            <ul class="prefix-link-icon prefix-icon-line">
-
-                                                <li class="dropdown-item">
-                                                    <a class="dropdown-link" href="niche.classifieds-category.html">TV
-                                                        / Audio / Video</a>
-                                                </li>
-
-                                                <li class="dropdown-item">
-                                                    <a class="dropdown-link"
-                                                        href="niche.classifieds-category.html">Computers &amp;
-                                                        Laptops</a>
-                                                </li>
-
-                                                <li class="dropdown-item">
-                                                    <a class="dropdown-link"
-                                                        href="niche.classifieds-category.html">Camers &amp; Lenses</a>
-                                                </li>
-
-                                                <li class="dropdown-item">
-                                                    <a class="dropdown-link"
-                                                        href="niche.classifieds-category.html">Games /
-                                                        Entertainment</a>
-                                                </li>
-
-                                                <li class="dropdown-item">
-                                                    <a class="dropdown-link"
-                                                        href="niche.classifieds-category.html">Fridges</a>
-                                                </li>
-
-                                                <li class="dropdown-item">
-                                                    <a class="dropdown-link"
-                                                        href="niche.classifieds-category.html">Computer Accesories</a>
-                                                </li>
-
-                                                <li class="dropdown-item">
-                                                    <a class="dropdown-link"
-                                                        href="niche.classifieds-category.html">HDD / Printes /
-                                                        Monitors</a>
-                                                </li>
-
-                                                <li class="dropdown-item">
-                                                    <a class="dropdown-link"
-                                                        href="niche.classifieds-category.html">Washing MAchine</a>
-                                                </li>
-
-                                            </ul>
-
-                                            <h3 class="h6 mb-3 mt-4">
-                                                Phone / Mobile
-                                            </h3>
-                                            <ul class="prefix-link-icon prefix-icon-line">
-
-                                                <li class="dropdown-item">
-                                                    <a class="dropdown-link"
-                                                        href="niche.classifieds-category.html">Mobile Phones</a>
-                                                </li>
-
-                                                <li class="dropdown-item">
-                                                    <a class="dropdown-link"
-                                                        href="niche.classifieds-category.html">Tablets</a>
-                                                </li>
-
-                                                <li class="dropdown-item">
-                                                    <a class="dropdown-link"
-                                                        href="niche.classifieds-category.html">Charges / Earphones</a>
-                                                </li>
-
-                                                <li class="dropdown-item">
-                                                    <a class="dropdown-link"
-                                                        href="niche.classifieds-category.html">Accessories</a>
-                                                </li>
-
-                                            </ul>
-
-                                        </div>
-
-                                        <div class="col-12 col-md-3">
-
-                                            <h3 class="h6 mb-3">
-                                                Services
-                                            </h3>
-                                            <ul class="prefix-link-icon prefix-icon-line">
-
-                                                <li class="dropdown-item">
-                                                    <a class="dropdown-link"
-                                                        href="niche.classifieds-category.html">Electronis &amp;
-                                                        Computer</a>
-                                                </li>
-
-                                                <li class="dropdown-item">
-                                                    <a class="dropdown-link"
-                                                        href="niche.classifieds-category.html">Education</a>
-                                                </li>
-
-                                                <li class="dropdown-item">
-                                                    <a class="dropdown-link"
-                                                        href="niche.classifieds-category.html">Development /
-                                                        Webdesign</a>
-                                                </li>
-
-                                                <li class="dropdown-item">
-                                                    <a class="dropdown-link"
-                                                        href="niche.classifieds-category.html">Health &amp; Beauty</a>
-                                                </li>
-
-                                                <li class="dropdown-item">
-                                                    <a class="dropdown-link"
-                                                        href="niche.classifieds-category.html">Driving / Taxi</a>
-                                                </li>
-
-                                            </ul>
-
-                                            <h3 class="h6 mb-3 mt-4">
-                                                Pets
-                                            </h3>
-                                            <ul class="prefix-link-icon prefix-icon-line">
-
-                                                <li class="dropdown-item">
-                                                    <a class="dropdown-link"
-                                                        href="niche.classifieds-category.html">Fishes &amp;
-                                                        Aquarium</a>
-                                                </li>
-
-                                                <li class="dropdown-item">
-                                                    <a class="dropdown-link"
-                                                        href="niche.classifieds-category.html">Pet Food &amp;
-                                                        Accessories</a>
-                                                </li>
-
-                                                <li class="dropdown-item">
-                                                    <a class="dropdown-link"
-                                                        href="niche.classifieds-category.html">Dogs</a>
-                                                </li>
-
-                                                <li class="dropdown-item">
-                                                    <a class="dropdown-link"
-                                                        href="niche.classifieds-category.html">Cats</a>
-                                                </li>
-
-                                                <li class="dropdown-item">
-                                                    <a class="dropdown-link"
-                                                        href="niche.classifieds-category.html">Toys</a>
-                                                </li>
-
-                                                <li class="dropdown-item">
-                                                    <a class="dropdown-link"
-                                                        href="niche.classifieds-category.html">Other Pets</a>
-                                                </li>
-
-                                            </ul>
-
-                                        </div>
-
-                                        <div class="col-12 col-md-3">
-
-                                            <h3 class="h6 mb-3">
-                                                Fashion
-                                            </h3>
-                                            <ul class="prefix-link-icon prefix-icon-line">
-
-                                                <li class="dropdown-item">
-                                                    <a class="dropdown-link"
-                                                        href="niche.classifieds-category.html">Men</a>
-                                                </li>
-
-                                                <li class="dropdown-item">
-                                                    <a class="dropdown-link"
-                                                        href="niche.classifieds-category.html">Women</a>
-                                                </li>
-
-                                                <li class="dropdown-item">
-                                                    <a class="dropdown-link"
-                                                        href="niche.classifieds-category.html">Kids</a>
-                                                </li>
-
-                                            </ul>
-
-                                            <h3 class="h6 mb-3 mt-4">
-                                                Books &amp; Hobbies
-                                            </h3>
-                                            <ul class="prefix-link-icon prefix-icon-line">
-
-                                                <li class="dropdown-item">
-                                                    <a class="dropdown-link"
-                                                        href="niche.classifieds-category.html">Books</a>
-                                                </li>
-
-                                                <li class="dropdown-item">
-                                                    <a class="dropdown-link"
-                                                        href="niche.classifieds-category.html">Gym &amp; Finess</a>
-                                                </li>
-
-                                                <li class="dropdown-item">
-                                                    <a class="dropdown-link"
-                                                        href="niche.classifieds-category.html">Muscial Instruments</a>
-                                                </li>
-
-                                                <li class="dropdown-item">
-                                                    <a class="dropdown-link"
-                                                        href="niche.classifieds-category.html">Sport Equipment</a>
-                                                </li>
-
-                                                <li class="dropdown-item">
-                                                    <a class="dropdown-link"
-                                                        href="niche.classifieds-category.html">Mountain Equipment</a>
-                                                </li>
-
-                                                <li class="dropdown-item">
-                                                    <a class="dropdown-link"
-                                                        href="niche.classifieds-category.html">Other</a>
-                                                </li>
-
-                                            </ul>
-                                        </div>
                                     </div>
                                 </li>
                             </ul>
