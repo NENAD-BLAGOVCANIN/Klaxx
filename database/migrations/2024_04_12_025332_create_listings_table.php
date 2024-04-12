@@ -14,6 +14,8 @@ return new class extends Migration
             $table->text('description');
             $table->unsignedBigInteger('user_id')->nullable();
             $table->foreign('user_id')->references('id')->on('users');
+            $table->unsignedBigInteger('category_id')->nullable();
+            $table->foreign('category_id')->references('id')->on('categories');
             $table->decimal('price', 10, 2);
             $table->timestamps();
             $table->boolean('is_deleted')->default(false);
