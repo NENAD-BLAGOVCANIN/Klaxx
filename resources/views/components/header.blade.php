@@ -26,7 +26,7 @@
                     </svg>
                 </button>
 
-                <a class="navbar-brand m-0" href="landing-0.html">
+                <a class="navbar-brand m-0" href="/">
                     <img src="/images/logo/logo_dark.svg?v=2" class="w-100" style="max-width: 165px !important"
                         alt="...">
                 </a>
@@ -131,17 +131,18 @@
                                 <span>Dashboard</span>
                             </a>
                             <div class="dropdown-divider mb-3"></div>
-                            <a class="dropdown-item active" href="account-index.html">
-                                <svg class="text-gray-600 float-start" width="18px" height="18px"
-                                    viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
-                                    <path fill-rule="evenodd"
-                                        d="M8 3.293l6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6zm5-.793V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z">
-                                    </path>
-                                    <path fill-rule="evenodd"
-                                        d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z">
-                                    </path>
-                                </svg>
+                            <a class="dropdown-item active" href="/account">
+                                <svg class="text-gray-600 float-start" width="18px" height="18px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M8 3.293l6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6zm5-.793V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"></path>
+                                    <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"></path>
+                                  </svg>
                                 <span>My account</span>
+                            </a>
+                            <a class="dropdown-item" href="/my-listings">
+                                <svg class="text-gray-600 float-start" width="18px" height="18px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10.273 2.513l-.921-.944.715-.698.622.637.89-.011a2.89 2.89 0 0 1 2.924 2.924l-.01.89.636.622a2.89 2.89 0 0 1 0 4.134l-.637.622.011.89a2.89 2.89 0 0 1-2.924 2.924l-.89-.01-.622.636a2.89 2.89 0 0 1-4.134 0l-.622-.637-.89.011a2.89 2.89 0 0 1-2.924-2.924l.01-.89-.636-.622a2.89 2.89 0 0 1 0-4.134l.637-.622-.011-.89a2.89 2.89 0 0 1 2.924-2.924l.89.01.622-.636a2.89 2.89 0 0 1 4.134 0l-.715.698a1.89 1.89 0 0 0-2.704 0l-.92.944-1.32-.016a1.89 1.89 0 0 0-1.911 1.912l.016 1.318-.944.921a1.89 1.89 0 0 0 0 2.704l.944.92-.016 1.32a1.89 1.89 0 0 0 1.912 1.911l1.318-.016.921.944a1.89 1.89 0 0 0 2.704 0l.92-.944 1.32.016a1.89 1.89 0 0 0 1.911-1.912l-.016-1.318.944-.921a1.89 1.89 0 0 0 0-2.704l-.944-.92.016-1.32a1.89 1.89 0 0 0-1.912-1.911l-1.318.016z"></path>
+                                    <path fill-rule="evenodd" d="M10.354 6.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708 0z"></path>
+                                  </svg> <span>My Listings</span>
                             </a>
                             <a class="dropdown-item" href="account-favourites.html">
                                 <svg class="text-gray-600 float-start" width="18px" height="18px"
@@ -261,15 +262,16 @@
                                 Categories
                             </a>
 
-                            <ul class="dropdown-menu dropdown-menu-hover dropdown-menu-clean"
+                            <ul class="dropdown-menu dropdown-menu-hover dropdown-menu-clean pt-0"
                                 aria-labelledby="mainNavMainCategories">
                                 <li class="dropdown-item bg-transparent">
 
                                     <div class="row col-border-md">
 
-                                        <div class="col-12 col-md-3">
-                                            @foreach ($categories as $category)
-                                                <h3 class="h6 mb-3">
+                                        @foreach ($categories as $category)
+                                            <div class="col-12 col-md-4">
+
+                                                <h3 class="h6 mt-4 mb-3">
                                                     {{ $category->name }}
                                                 </h3>
                                                 <ul class="prefix-link-icon prefix-icon-line">
@@ -280,8 +282,8 @@
                                                         </li>
                                                     @endforeach
                                                 </ul>
-                                            @endforeach
-                                        </div>
+                                            </div>
+                                        @endforeach
 
                                     </div>
                                 </li>
