@@ -8,14 +8,19 @@
     <div class="container py-5">
 
         <div class="d-flex justify-content-between align-items-center pb-5">
-            <h2>My Listings</h2>
-            <a href="/listings/create" class="btn btn-primary">Create new listing</a>
+            <h1 class="h4 fw-bold">My Listings
+                <small class="d-block smaller fw-medium text-muted pt-2">
+                    Here you can manage listings published be this account.
+                </small>
+            </h1>
+
+            <a href="/listings/create" class="btn btn-dark"><i class="fa fa-plus"></i> Create new listing</a>
+
         </div>
 
 
-
         <div class="row">
-            @foreach ($listings as $listing)
+            @forelse ($listings as $listing)
                 <div class="shadow-xs rounded mb-4 p-3">
 
                     <div class="row g-0">
@@ -129,7 +134,12 @@
                     </div>
 
                 </div>
-            @endforeach
+            @empty
+                <div class="py-5">
+                    <span class="text-muted text-center m-auto d-block py-5">😔 You haven't published any listings yet!</span>
+                </div>
+            @endforelse
+
         </div>
 
 

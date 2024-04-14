@@ -12,32 +12,26 @@
                 <div class="col mb-5">
 
                     <span class="h4 float-end text-danger">
-                        $124.00
+                        ${{ $listing->price }}
                     </span>
 
                     <h1 class="h4 fw-bold mb-5">
-                        2019 New original shoes, never weared
+                        {{ $listing->title }}
 
                         <small class="d-block smaller fw-medium text-muted">
-                            Updated on: 16 April 2019
+                            Updated on: {{ $listing->updated_at->format('j F Y') }}
                         </small>
                     </h1>
 
                     <figure class="mb-5">
-                        <img class="img-fluid"
-                            src="/images/unsplash/products/barrett-ward-cOJgO4Zzs-w-unsplash-min.jpg"
+                        <img class="img-fluid" src="/images/unsplash/products/barrett-ward-cOJgO4Zzs-w-unsplash-min.jpg"
                             alt="...">
                     </figure>
 
                     <h2 class="h5">Seller's Comments</h2>
-                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered
-                        alteration in some form, by injected humour, or randomised words which don't look even slightly
-                        believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't
-                        anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet
-                        tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.
-                        It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures,
-                        to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free
-                        from repetition, injected humour, or non-characteristic words etc.</p>
+                    <p>
+                        {{ $listing->description }}
+                    </p>
 
                     <div class="bg-light p-3 fs-6">
                         We highly recommend buyers to get the precise details from sellers directly before making any
