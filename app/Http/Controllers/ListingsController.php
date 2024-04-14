@@ -24,20 +24,42 @@ class ListingsController extends Controller
                 'price' => 'required|numeric',
                 'category_id' => 'required|exists:categories,id',
             ]);
-        
+
             $listing = new Listing();
             $listing->title = $validatedData['title'];
             $listing->price = $validatedData['price'];
             $listing->user_id = auth()->user()->id;
             $listing->category_id = $validatedData['category_id'];
-        
+
             $listing->save();
-        
-            return redirect("/my-listings")->with('success', 'Listing created successfully.');
+
+            return redirect("/listings/" . $listing->id . "/description");
         }
-        
+
 
         return view('listings.create');
+    }
+
+    public function updateDescription(Request $request, $listing_id)
+    {
+
+        if ($request->method() == "POST") {
+            
+            $listing = Listing::findOrFail($listing_id);
+            $description = $request->get('description');
+            $listing->description = $description;
+            $listing->save();
+
+            return redirect("/listings/" . $listing->id . "/images");
+
+
+        }
+
+        return view('listings.updateDescription');
+    }
+
+    public function updateImages(Request $request, $listing_id){
+        return view('listings.updateImages');
     }
 
 }
