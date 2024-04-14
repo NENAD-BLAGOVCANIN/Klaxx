@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Listing;
+use App\Models\ListingImage;
 
 class ListingsController extends Controller
 {
@@ -59,6 +60,27 @@ class ListingsController extends Controller
     }
 
     public function updateImages(Request $request, $listing_id){
+
+        if ($request->method() == "POST") {
+            
+            $request->validate([
+                'image' => 'image|mimes:jpeg,png,jpg,gif|max:2048' // Maximum file size is set to 2MB
+            ]);
+
+            if ($request->hasFile('image')) {
+                $image = $request->file('image');
+                $path = $image->store('listing_images', 'public');
+    
+                ListingImage::create([
+                    'image_path' => '/storage/' . $path,
+                    'listing_id' => $listing_id,
+                ]);
+            }
+
+            return redirect()->back()->with('success', 'Image uploaded successfully');
+
+        }
+
         return view('listings.updateImages');
     }
 

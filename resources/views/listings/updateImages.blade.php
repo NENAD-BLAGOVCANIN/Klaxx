@@ -8,10 +8,11 @@
     <div class="container py-5">
         <h2><b>Listing Images</b></h2>
 
-        <form action="#" method="POST">@csrf
+        <form action="#" method="POST" enctype="multipart/form-data">
+            @csrf
 
-            <label class="my-3 text-muted">Please write detailed descriptions of your product or service</label>
-            <textarea name="description" class="form-control bg-gray-200" rows="10"></textarea>
+            <input type="file" name="image">
+
 
             <button type="submit" class="btn btn-primary mt-4">Save and continue</button>
 
