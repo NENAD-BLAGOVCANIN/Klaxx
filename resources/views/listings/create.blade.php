@@ -16,9 +16,6 @@
             <label class="mt-3">Price <span class="text-danger">*</span></label>
             <input type="number" name="price" class="form-control">
 
-            <label class="mt-3">Description <span class="text-danger">*</span></label>
-            <textarea name="description" class="form-control"></textarea>
-
             <label class="mt-3">Category <span class="text-danger">*</span></label>
             <select name="category_id" class="form-control">
                 <option value="">Select Category</option>
@@ -27,7 +24,7 @@
                 @endforeach
             </select>
 
-            <button type="submit" class="btn btn-primary mt-3">Publish</button>
+            <button type="submit" class="btn btn-primary mt-4">Save and continue</button>
 
         </form>
 
