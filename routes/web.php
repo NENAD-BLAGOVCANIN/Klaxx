@@ -6,6 +6,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ListingsController;
+use App\Http\Controllers\SearchController;
 
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
@@ -16,6 +17,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
+    Route::get('/search', [SearchController::class, 'results'])->name('search.results');
 
     Route::get('/listings/view/{listing_id}', [ListingsController::class, 'view'])->name('listings.view');
     Route::get('/my-listings', [ListingsController::class, 'myListings'])->name('listings.myListings');

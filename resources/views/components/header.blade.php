@@ -33,7 +33,7 @@
 
             </div>
 
-            <form action="#search-page" method="GET" data-autosuggest="on" data-mode="json" data-json-max-results='10'
+            <form action="/search?query=shoes" method="GET" data-autosuggest="on" data-mode="json" data-json-max-results='10'
                 data-json-related-title='Explore Smarty' data-json-related-item-icon='fi fi-star-empty'
                 data-json-suggest-title='Suggestions for you' data-json-suggest-noresult='No results for'
                 data-json-suggest-item-icon='fi fi-search' data-json-suggest-min-score='5'
