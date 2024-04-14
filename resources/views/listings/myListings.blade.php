@@ -16,7 +16,6 @@
 
         <div class="row">
             @foreach ($listings as $listing)
-
                 <div class="shadow-xs rounded mb-4 p-3">
 
                     <div class="row g-0">
@@ -25,7 +24,12 @@
 
                             <figure class="overflow-hidden text-center clearfix d-block m-0 position-relative">
                                 <a href="niche.classifieds-item.html" class="text-decoration-none">
-                                    <img class="img-fluid lazy" data-src="/images/unsplash/products/barrett-ward-cOJgO4Zzs-w-unsplash-min.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="...">
+                                    @if ($listing->images->isNotEmpty())
+                                        <img class="img-fluid lazy" src="{{ $listing->images[0]->image_path }}"
+                                            alt="...">
+                                    @else
+                                        <img class="img-fluid lazy" src="/images/various/no-image.jpg" alt="No Image">
+                                    @endif
                                 </a>
                             </figure>
 
@@ -49,7 +53,7 @@
                         <div class="col-6 col-md-3 order-xs-2 order-md-3 order-lg-3 p--0">
 
                             <span class="btn btn-sm w-100 bg-primary text-white text-center mb-2 fs-6 d-none d-lg-block">
-                                <i class="fi fi-star"></i> 
+                                <i class="fi fi-star"></i>
                                 Featured
                             </span>
 
@@ -103,7 +107,7 @@
 
                                 <!-- mobile : compare+save -->
                                 <div class="clearfix d-block d-sm-none">
-                                    
+
                                     <hr>
 
                                     <label class="form-checkbox form-checkbox-danger">
@@ -115,7 +119,7 @@
                                         <i class="fi fi-heart-slim float--start fs-4"></i>
                                         <span class="d-inline-block">Save</span>
                                     </a>
-                    
+
                                 </div>
 
                             </div>
@@ -125,7 +129,6 @@
                     </div>
 
                 </div>
-
             @endforeach
         </div>
 
