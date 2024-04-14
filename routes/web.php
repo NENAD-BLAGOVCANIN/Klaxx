@@ -17,6 +17,7 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
+    Route::get('/listings/view/{listing_id}', [ListingsController::class, 'view'])->name('listings.view');
     Route::get('/my-listings', [ListingsController::class, 'myListings'])->name('listings.myListings');
     Route::match(['get', 'post'], '/listings/create', [ListingsController::class, 'create'])->name('listings.create');
     Route::match(['get', 'post'], '/listings/{listing_id}/description', [ListingsController::class, 'updateDescription'])->name('listings.updateDescription');

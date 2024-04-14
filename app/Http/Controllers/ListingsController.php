@@ -9,6 +9,14 @@ use App\Models\ListingImage;
 
 class ListingsController extends Controller
 {
+
+    public function view(Request $request, $listing_id){
+
+        $listing = Listing::findOrFail($listing_id);
+
+        return view('listings.view', compact('listing'));
+    }
+
     public function myListings(Request $request)
     {
 

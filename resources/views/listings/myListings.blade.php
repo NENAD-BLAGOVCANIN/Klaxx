@@ -23,7 +23,7 @@
                         <div class="col-6 col-md-3 p--0">
 
                             <figure class="overflow-hidden text-center clearfix d-block m-0 position-relative">
-                                <a href="niche.classifieds-item.html" class="text-decoration-none">
+                                <a href='/listings/view/{{ $listing->id }}' class="text-decoration-none">
                                     @if ($listing->images->isNotEmpty())
                                         <img class="img-fluid lazy" src="{{ $listing->images[0]->image_path }}"
                                             alt="...">
@@ -87,7 +87,7 @@
                             <div class="p-0 p-lg-3">
 
                                 <h2 class="fs-5">
-                                    <a href="niche.classifieds-item.html" class="text-danger">
+                                    <a href='/listings/view/{{ $listing->id }}' class="text-danger">
                                         {{ $listing->title }}
                                     </a>
                                 </h2>
