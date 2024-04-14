@@ -20,6 +20,7 @@
 		<!-- favicon -->
 		<link rel="shortcut icon" href="favicon.ico">
 		<link rel="apple-touch-icon" href="demo.files/logo/icon_512x512.png">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 	</head>
 	

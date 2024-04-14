@@ -80,8 +80,11 @@ class ListingsController extends Controller
             return redirect()->back()->with('success', 'Image uploaded successfully');
 
         }
+        
+        $listing = Listing::findOrFail($listing_id);
+        $existingImages = $listing->images;
 
-        return view('listings.updateImages');
+        return view('listings.updateImages', compact('existingImages'));
     }
 
 }
