@@ -116,7 +116,7 @@
                             class="list-unstyled dropdown-menu dropdown-menu-clean dropdown-click-ignore end-0 py-2 rounded-xl"
                             style="min-width:215px;">
 
-                            <div class="dropdown-header px-4 mb-1 text-wrap fw-medium">John Doe</div>
+                            <div class="dropdown-header px-4 mb-1 text-wrap fw-medium">{{ auth()->user()->name }}</div>
                             <div class="dropdown-divider mb-3"></div>
                             <a class="dropdown-item" href="/admin/dashboard">
                                 <svg class="text-gray-600 float-start" width="18px" height="18px" viewBox="0 0 16 16"
@@ -144,36 +144,7 @@
                                     <path fill-rule="evenodd" d="M10.354 6.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708 0z"></path>
                                   </svg> <span>My Listings</span>
                             </a>
-                            <a class="dropdown-item" href="account-favourites.html">
-                                <svg class="text-gray-600 float-start" width="18px" height="18px"
-                                    viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
-                                    <path fill-rule="evenodd"
-                                        d="M8 2.748l-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z">
-                                    </path>
-                                </svg>
-                                <span>Favourites</span>
-                            </a>
-                            <a class="dropdown-item" href="account-reward.html">
-                                <svg class="text-gray-600 float-start" width="18px" height="18px"
-                                    viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
-                                    <path fill-rule="evenodd"
-                                        d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z">
-                                    </path>
-                                    <path fill-rule="evenodd"
-                                        d="M11.315 10.014a.5.5 0 0 1 .548.736A4.498 4.498 0 0 1 7.965 13a4.498 4.498 0 0 1-3.898-2.25.5.5 0 0 1 .548-.736h.005l.017.005.067.015.252.055c.215.046.515.108.857.169.693.124 1.522.242 2.152.242.63 0 1.46-.118 2.152-.242a26.58 26.58 0 0 0 1.109-.224l.067-.015.017-.004.005-.002zM4.756 4.566c.763-1.424 4.02-.12.952 3.434-4.496-1.596-2.35-4.298-.952-3.434zm6.488 0c1.398-.864 3.544 1.838-.952 3.434-3.067-3.554.19-4.858.952-3.434z">
-                                    </path>
-                                </svg>
-                                <span>Reward points</span>
-                            </a>
-                            <a class="dropdown-item" href="account-settings.html">
-                                <svg class="text-gray-600 float-start" width="18px" height="18px"
-                                    viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
-                                    <path fill-rule="evenodd"
-                                        d="M.102 2.223A3.004 3.004 0 0 0 3.78 5.897l6.341 6.252A3.003 3.003 0 0 0 13 16a3 3 0 1 0-.851-5.878L5.897 3.781A3.004 3.004 0 0 0 2.223.1l2.141 2.142L4 4l-1.757.364L.102 2.223zm13.37 9.019L13 11l-.471.242-.529.026-.287.445-.445.287-.026.529L11 13l.242.471.026.529.445.287.287.445.529.026L13 15l.471-.242.529-.026.287-.445.445-.287.026-.529L15 13l-.242-.471-.026-.529-.445-.287-.287-.445-.529-.026z">
-                                    </path>
-                                </svg>
-                                <span>Account settings</span>
-                            </a>
+
                             <div class="dropdown-divider mt-3"></div>
                             <form method="POST" action="/logout">
                                 @csrf

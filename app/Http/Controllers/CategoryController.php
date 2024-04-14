@@ -11,9 +11,8 @@ class CategoryController extends Controller
 {
     public function show(Category $category_id)
     {
-        $category = Category::with('subcategories')->where('id', '=', $category_id)->get();
-        $listings = Listing::where('category_id', $category->id)->get();
+        $listings = Listing::where('category_id', $category_id)->get();
 
-        return view('categories.show', compact('category'));
+        return view('categories.show', compact('listings'));
     }
 }
