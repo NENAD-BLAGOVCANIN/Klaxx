@@ -21,6 +21,7 @@ Route::middleware('auth')->group(function () {
     Route::match(['get', 'post'], '/listings/create', [ListingsController::class, 'create'])->name('listings.create');
     Route::match(['get', 'post'], '/listings/{listing_id}/description', [ListingsController::class, 'updateDescription'])->name('listings.updateDescription');
     Route::match(['get', 'post'], '/listings/{listing_id}/images', [ListingsController::class, 'updateImages'])->name('listings.updateImages');
+    Route::post('/listings/{listing_id}/publish', [ListingsController::class, 'publish'])->name('listings.publish');
 
 });
 

@@ -84,7 +84,16 @@ class ListingsController extends Controller
         $listing = Listing::findOrFail($listing_id);
         $existingImages = $listing->images;
 
-        return view('listings.updateImages', compact('existingImages'));
+        return view('listings.updateImages', compact('existingImages', 'listing_id'));
+    }
+
+    public function publish(Request $request, $listing_id){
+        $listing = Listing::findOrFail($listing_id);
+        $listing->status = Listing::STATUS_ACTIVE;
+        $listing->save();
+        
+        return redirect('/my-listings')->with('success', 'Successfully published your listing!');
+
     }
 
 }

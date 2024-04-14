@@ -37,7 +37,8 @@
 
         </form>
 
-        <form action="">
+        <form method="POST" action="/listings/{{ $listing_id }}/publish">
+            @csrf
             <button type="submit" class="btn btn-primary mt-4">Publish Listing</button>
         </form>
 
