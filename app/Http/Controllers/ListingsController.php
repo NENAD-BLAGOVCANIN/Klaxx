@@ -8,6 +8,7 @@ use App\Models\Listing;
 use App\Models\ListingImage;
 use App\Models\Category;
 use App\Models\CategoryAttribute;
+use App\Models\ListingAttribute;
 
 class ListingsController extends Controller
 {
@@ -53,10 +54,6 @@ class ListingsController extends Controller
 
     public function updateAttributes(Request $request, $listing_id) {
 
-        if ($request->method() == "POST") {
-
-        }
-
         $listing = Listing::findOrFail($listing_id);
         $category_id = $listing->category_id;
 
@@ -70,6 +67,22 @@ class ListingsController extends Controller
             $categoryAttributes = $categoryAttributes->merge($parentCategoryAttributes);
         }
         
+        
+        if ($request->method() == "POST") {
+            foreach ($categoryAttributes as $attribute) {
+
+                $inputName = 'attribute_' . $attribute->attribute->id;
+                $value = $request->input($inputName);
+    
+                $listingAttribute = new ListingAttribute();
+                $listingAttribute->listing_id = $listing_id;
+                $listingAttribute->attribute_id = $attribute->attribute->id;
+                $listingAttribute->value = $value;
+                $listingAttribute->save();
+            }
+            return redirect("/listings/" . $listing->id . "/description");
+        }
+
         return view('listings.updateAttributes', compact('categoryAttributes', 'listing'));
     }
     
