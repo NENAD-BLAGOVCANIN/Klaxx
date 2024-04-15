@@ -173,12 +173,12 @@
 
                             <div class="p-3">
 
-                                <a href="/login" class="btn btn-primary w-100 m-0">
+                                <a href="/register" class="btn btn-primary w-100 m-0">
                                     Create an account
                                 </a>
                                 <div class="d-flex w-100 pt-3">
                                     <span class="text-muted pe-2" style="width: max-content">Already a member?</span>
-                                    <a href="/register" style="width: max-content; font-weight: 500">
+                                    <a href="/login" style="width: max-content; font-weight: 500">
                                         Log in
                                     </a>
                                 </div>
