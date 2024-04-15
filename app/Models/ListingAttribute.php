@@ -5,14 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class CategoryAttribute extends Model
+class ListingAttribute extends Model
 {
     use HasFactory;
-    protected $table = 'category_attributes';
+    protected $table = 'listing_attributes';
 
-    public function category()
+    public function listing()
     {
-        return $this->belongsTo(Category::class, 'category_id');
+        return $this->belongsTo(Listing::class);
     }
 
     public function attribute()

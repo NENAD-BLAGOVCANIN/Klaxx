@@ -70,7 +70,6 @@
                             <li class="list-item clearfix border-bottom py-2">
                                 <span class="float-end">Summer</span>
                                 <span class="text-muted">
-                                    <i class="fi fi-arrow-end text-gray-400 fs-5"></i>
                                     <span class="d-inline-block px-2">Season</span>
                                 </span>
                             </li>
@@ -80,7 +79,6 @@
                                     Smarty
                                 </a>
                                 <span class="text-muted">
-                                    <i class="fi fi-brain fs-5"></i>
                                     <span class="d-inline-block px-2">Brand</span>
                                 </span>
                             </li>
@@ -88,23 +86,18 @@
                             <li class="list-item clearfix border-bottom py-2">
                                 <span class="float-end">Yes</span>
                                 <span class="text-muted">
-                                    <i class="fi fi-fingerprint fs-5"></i>
                                     <span class="d-inline-block px-2">Fingerprint</span>
                                 </span>
                             </li>
 
                             <li class="list-item clearfix border-bottom py-2">
-                                <i class="float-end fi fi-check text-success fs-5"></i>
                                 <span class="text-muted">
-                                    <i class="fi fi-lightbulb fs-5"></i>
                                     <span class="d-inline-block px-2">Smart</span>
                                 </span>
                             </li>
 
                             <li class="list-item clearfix border-bottom py-2">
-                                <i class="float-end fi fi-close text-danger fs-5"></i>
                                 <span class="text-muted">
-                                    <i class="fi fi-colors-2 fs-5"></i>
                                     <span class="d-inline-block px-2">Milticolor</span>
                                 </span>
                             </li>
@@ -112,7 +105,6 @@
                             <li class="list-item clearfix border-bottom py-2">
                                 <span class="float-end">Yes</span>
                                 <span class="text-muted">
-                                    <i class="fi fi-loud fs-5"></i>
                                     <span class="d-inline-block px-2">Loud Volume</span>
                                 </span>
                             </li>
@@ -120,7 +112,6 @@
                             <li class="list-item clearfix border-bottom py-2">
                                 <span class="float-end">7/7</span>
                                 <span class="text-muted">
-                                    <i class="fi fi-support fs-5"></i>
                                     <span class="d-inline-block px-2">Support</span>
                                 </span>
                             </li>
