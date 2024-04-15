@@ -24,8 +24,7 @@
                     </h1>
 
                     <figure class="mb-5">
-                        <img class="img-fluid" src="{{ $listing->images[0]->image_path }}"
-                            alt="...">
+                        <img class="img-fluid" src="{{ $listing->images[0]->image_path }}" alt="...">
                     </figure>
 
                     <h2 class="h5">Seller's Comments</h2>
@@ -67,54 +66,14 @@
                         <!-- specs list -->
                         <ul class="list-unstyled mb-0">
 
-                            <li class="list-item clearfix border-bottom py-2">
-                                <span class="float-end">Summer</span>
-                                <span class="text-muted">
-                                    <span class="d-inline-block px-2">Season</span>
-                                </span>
-                            </li>
-
-                            <li class="list-item clearfix border-bottom py-3">
-                                <a href="#" class="float-end link-muted">
-                                    Smarty
-                                </a>
-                                <span class="text-muted">
-                                    <span class="d-inline-block px-2">Brand</span>
-                                </span>
-                            </li>
-
-                            <li class="list-item clearfix border-bottom py-2">
-                                <span class="float-end">Yes</span>
-                                <span class="text-muted">
-                                    <span class="d-inline-block px-2">Fingerprint</span>
-                                </span>
-                            </li>
-
-                            <li class="list-item clearfix border-bottom py-2">
-                                <span class="text-muted">
-                                    <span class="d-inline-block px-2">Smart</span>
-                                </span>
-                            </li>
-
-                            <li class="list-item clearfix border-bottom py-2">
-                                <span class="text-muted">
-                                    <span class="d-inline-block px-2">Milticolor</span>
-                                </span>
-                            </li>
-
-                            <li class="list-item clearfix border-bottom py-2">
-                                <span class="float-end">Yes</span>
-                                <span class="text-muted">
-                                    <span class="d-inline-block px-2">Loud Volume</span>
-                                </span>
-                            </li>
-
-                            <li class="list-item clearfix border-bottom py-2">
-                                <span class="float-end">7/7</span>
-                                <span class="text-muted">
-                                    <span class="d-inline-block px-2">Support</span>
-                                </span>
-                            </li>
+                            @foreach ($listingAttributes as $listingAttribute)
+                                <li class="list-item clearfix border-bottom py-2">
+                                    <span class="float-end">{{ $listingAttribute->value }}</span>
+                                    <span class="text-muted">
+                                        <span class="d-inline-block px-2">{{ $listingAttribute->attribute->name }}</span>
+                                    </span>
+                                </li>
+                            @endforeach
 
                         </ul>
                         <!-- /specs list -->
