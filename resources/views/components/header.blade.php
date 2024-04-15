@@ -33,13 +33,14 @@
 
             </div>
 
-            <form action="/search?query=shoes" method="GET" data-autosuggest="on" data-mode="json" data-json-max-results='10'
-                data-json-related-title='Explore Smarty' data-json-related-item-icon='fi fi-star-empty'
-                data-json-suggest-title='Suggestions for you' data-json-suggest-noresult='No results for'
-                data-json-suggest-item-icon='fi fi-search' data-json-suggest-min-score='5'
-                data-json-highlight-term='true' data-contentType='application/json; charset=utf-8' data-dataType='json'
-                data-theme-class="danger" data-container="#sow-search-container" data-input-min-length="2"
-                data-input-delay="250" data-related-keywords="" data-related-url="_ajax/search_suggest_related.json"
+            <form action="/search?query=shoes" method="GET" data-autosuggest="on" data-mode="json"
+                data-json-max-results='10' data-json-related-title='Explore Smarty'
+                data-json-related-item-icon='fi fi-star-empty' data-json-suggest-title='Suggestions for you'
+                data-json-suggest-noresult='No results for' data-json-suggest-item-icon='fi fi-search'
+                data-json-suggest-min-score='5' data-json-highlight-term='true'
+                data-contentType='application/json; charset=utf-8' data-dataType='json' data-theme-class="danger"
+                data-container="#sow-search-container" data-input-min-length="2" data-input-delay="250"
+                data-related-keywords="" data-related-url="_ajax/search_suggest_related.json"
                 data-suggest-url="_ajax/search_suggest_input.json" data-related-action="related_get"
                 data-suggest-action="suggest_get"
                 class="js-ajax-search sow-search sow-search-mobile-float d-flex-1-1-auto m-0 mx-lg-5">
@@ -100,22 +101,21 @@
 
                 </li>
 
-                @if (Auth::check())
-                    <li class="list-inline-item mx-1 dropdown">
+                <li class="list-inline-item mx-1 dropdown">
 
-                        <a href="#" aria-label="My Account" id="dropdownAccountOptions" data-bs-toggle="dropdown"
-                            aria-expanded="false" aria-haspopup="true"
-                            class="d-inline-block text-center text-dark fw-500">
-                            <i class="fi fi-users fs-4"></i>
-                            <span class="d-block small fw-500">account</span>
-                        </a>
+                    <a href="#" aria-label="My Account" id="dropdownAccountOptions" data-bs-toggle="dropdown"
+                        aria-expanded="false" aria-haspopup="true" class="d-inline-block text-center text-dark fw-500">
+                        <i class="fi fi-users fs-4"></i>
+                        <span class="d-block small fw-500">account</span>
+                    </a>
 
 
-                        <!-- dropdown -->
-                        <div aria-labelledby="dropdownAccountOptions"
-                            class="list-unstyled dropdown-menu dropdown-menu-clean dropdown-click-ignore end-0 py-2 rounded-xl"
-                            style="min-width:215px;">
+                    <!-- dropdown -->
+                    <div aria-labelledby="dropdownAccountOptions"
+                        class="list-unstyled dropdown-menu dropdown-menu-clean dropdown-click-ignore end-0 py-2 rounded-xl"
+                        style="min-width:215px;">
 
+                        @if (Auth::check())
                             <div class="dropdown-header px-4 mb-1 text-wrap fw-medium">{{ auth()->user()->name }}</div>
                             <div class="dropdown-divider mb-3"></div>
                             <a class="dropdown-item" href="/admin/dashboard">
@@ -132,17 +132,28 @@
                             </a>
                             <div class="dropdown-divider mb-3"></div>
                             <a class="dropdown-item {{ Request::is('/') ? 'active' : '' }}" href="/">
-                                <svg class="text-gray-600 float-start" width="18px" height="18px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
-                                    <path fill-rule="evenodd" d="M8 3.293l6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6zm5-.793V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"></path>
-                                    <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"></path>
-                                  </svg>
+                                <svg class="text-gray-600 float-start" width="18px" height="18px"
+                                    viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+                                    <path fill-rule="evenodd"
+                                        d="M8 3.293l6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6zm5-.793V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z">
+                                    </path>
+                                    <path fill-rule="evenodd"
+                                        d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z">
+                                    </path>
+                                </svg>
                                 <span>Home</span>
                             </a>
-                            <a class="dropdown-item {{ Request::is('my-listings') ? 'active' : '' }}" href="/my-listings">
-                                <svg class="text-gray-600 float-start" width="18px" height="18px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
-                                    <path fill-rule="evenodd" d="M10.273 2.513l-.921-.944.715-.698.622.637.89-.011a2.89 2.89 0 0 1 2.924 2.924l-.01.89.636.622a2.89 2.89 0 0 1 0 4.134l-.637.622.011.89a2.89 2.89 0 0 1-2.924 2.924l-.89-.01-.622.636a2.89 2.89 0 0 1-4.134 0l-.622-.637-.89.011a2.89 2.89 0 0 1-2.924-2.924l.01-.89-.636-.622a2.89 2.89 0 0 1 0-4.134l.637-.622-.011-.89a2.89 2.89 0 0 1 2.924-2.924l.89.01.622-.636a2.89 2.89 0 0 1 4.134 0l-.715.698a1.89 1.89 0 0 0-2.704 0l-.92.944-1.32-.016a1.89 1.89 0 0 0-1.911 1.912l.016 1.318-.944.921a1.89 1.89 0 0 0 0 2.704l.944.92-.016 1.32a1.89 1.89 0 0 0 1.912 1.911l1.318-.016.921.944a1.89 1.89 0 0 0 2.704 0l.92-.944 1.32.016a1.89 1.89 0 0 0 1.911-1.912l-.016-1.318.944-.921a1.89 1.89 0 0 0 0-2.704l-.944-.92.016-1.32a1.89 1.89 0 0 0-1.912-1.911l-1.318.016z"></path>
-                                    <path fill-rule="evenodd" d="M10.354 6.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708 0z"></path>
-                                  </svg> <span>My Listings</span>
+                            <a class="dropdown-item {{ Request::is('my-listings') ? 'active' : '' }}"
+                                href="/my-listings">
+                                <svg class="text-gray-600 float-start" width="18px" height="18px"
+                                    viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+                                    <path fill-rule="evenodd"
+                                        d="M10.273 2.513l-.921-.944.715-.698.622.637.89-.011a2.89 2.89 0 0 1 2.924 2.924l-.01.89.636.622a2.89 2.89 0 0 1 0 4.134l-.637.622.011.89a2.89 2.89 0 0 1-2.924 2.924l-.89-.01-.622.636a2.89 2.89 0 0 1-4.134 0l-.622-.637-.89.011a2.89 2.89 0 0 1-2.924-2.924l.01-.89-.636-.622a2.89 2.89 0 0 1 0-4.134l.637-.622-.011-.89a2.89 2.89 0 0 1 2.924-2.924l.89.01.622-.636a2.89 2.89 0 0 1 4.134 0l-.715.698a1.89 1.89 0 0 0-2.704 0l-.92.944-1.32-.016a1.89 1.89 0 0 0-1.911 1.912l.016 1.318-.944.921a1.89 1.89 0 0 0 0 2.704l.944.92-.016 1.32a1.89 1.89 0 0 0 1.912 1.911l1.318-.016.921.944a1.89 1.89 0 0 0 2.704 0l.92-.944 1.32.016a1.89 1.89 0 0 0 1.911-1.912l-.016-1.318.944-.921a1.89 1.89 0 0 0 0-2.704l-.944-.92.016-1.32a1.89 1.89 0 0 0-1.912-1.911l-1.318.016z">
+                                    </path>
+                                    <path fill-rule="evenodd"
+                                        d="M10.354 6.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708 0z">
+                                    </path>
+                                </svg> <span>My Listings</span>
                             </a>
 
                             <div class="dropdown-divider mt-3"></div>
@@ -155,35 +166,30 @@
                                     </span>
                                 </button>
                             </form>
+                        @else
+                            <div class="dropdown-header px-4 mb-1 text-wrap fw-medium">Welcome to Klemmes !</div>
 
-                        </div>
+                            <div class="dropdown-divider"></div>
 
-                    </li>
-                @else
-                    <li class="list-inline-item mx-1 dropdown">
+                            <div class="p-3">
 
-                        <a href="/register"
-                            class="d-none d-lg-block btn btn-sm btn-pill btn-primary rounded-circle-xs">
+                                <a href="/login" class="btn btn-primary w-100 m-0">
+                                    Create an account
+                                </a>
+                                <div class="d-flex w-100 pt-3">
+                                    <span class="text-muted pe-2" style="width: max-content">Already a member?</span>
+                                    <a href="/register" style="width: max-content; font-weight: 500">
+                                        Log in
+                                    </a>
+                                </div>
+                                
+                            </div>
+                        @endif
 
-                            <span class="px-2 d-none d-lg-inline-block">
-                                Sign Up
-                            </span>
+                    </div>
 
-                        </a>
+                </li>
 
-                    </li>
-                    <li class="list-inline-item mx-1 dropdown">
-
-                        <a href="/login" class="btn btn-sm btn-pill btn-basic bg-transparent rounded-circle-xs">
-
-                            <span class="d-block d-lg-inline-block">
-                                Login
-                            </span>
-
-                        </a>
-
-                    </li>
-                @endif
 
             </ul>
 
