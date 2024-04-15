@@ -53,6 +53,10 @@ class ListingsController extends Controller
 
     public function updateAttributes(Request $request, $listing_id) {
 
+        if ($request->method() == "POST") {
+
+        }
+
         $listing = Listing::findOrFail($listing_id);
         $category_id = $listing->category_id;
 
