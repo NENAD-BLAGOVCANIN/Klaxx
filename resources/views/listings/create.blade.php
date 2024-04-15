@@ -10,13 +10,13 @@
 
         <form action="#" method="POST" style="max-width: 550px">@csrf
 
-            <label class="mt-3">Title <span class="text-danger">*</span></label>
+            <label class="mt-3 pb-2">Title <span class="text-danger">*</span></label>
             <input type="text" name="title" class="form-control">
 
-            <label class="mt-3">Price <span class="text-danger">*</span></label>
+            <label class="mt-3 pb-2">Price <span class="text-danger">*</span></label>
             <input type="number" name="price" class="form-control">
 
-            <label class="mt-3">Category <span class="text-danger">*</span></label>
+            <label class="mt-3 pb-2">Category <span class="text-danger">*</span></label>
             <select name="category_id" class="form-control">
                 <option value="">Select Category</option>
                 @foreach ($categories as $category)
@@ -31,7 +31,7 @@
             </select>
 
 
-            <button type="submit" class="btn btn-primary mt-4">Save and continue</button>
+            <button type="submit" class="btn btn-primary mt-5">Save and continue</button>
 
         </form>
 
