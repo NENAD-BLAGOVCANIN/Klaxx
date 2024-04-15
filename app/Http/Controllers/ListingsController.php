@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Listing;
 use App\Models\ListingImage;
+use App\Models\Category;
+use App\Models\CategoryAttribute;
 
 class ListingsController extends Controller
 {
@@ -42,12 +44,32 @@ class ListingsController extends Controller
 
             $listing->save();
 
-            return redirect("/listings/" . $listing->id . "/description");
+            return redirect("/listings/" . $listing->id . "/attributes");
         }
 
 
         return view('listings.create');
     }
+
+    public function updateAttributes(Request $request, $listing_id) {
+
+        $listing = Listing::findOrFail($listing_id);
+        $category_id = $listing->category_id;
+
+        $category = Category::findOrFail($category_id);
+
+        
+        $categoryAttributes = CategoryAttribute::where('category_id', $category_id)->get();
+        
+        if ($category->parent) {
+            $parentCategoryAttributes = CategoryAttribute::where('category_id', $category->parent->id)->get();
+            $categoryAttributes = $categoryAttributes->merge($parentCategoryAttributes);
+        }
+        
+        return view('listings.updateAttributes', compact('categoryAttributes', 'listing'));
+    }
+    
+    
 
     public function updateDescription(Request $request, $listing_id)
     {
