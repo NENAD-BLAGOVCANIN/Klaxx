@@ -24,7 +24,7 @@
                     </h1>
 
                     <figure class="mb-5">
-                        <img class="img-fluid" src="/images/unsplash/products/barrett-ward-cOJgO4Zzs-w-unsplash-min.jpg"
+                        <img class="img-fluid" src="{{ $listing->images[0]->image_path }}"
                             alt="...">
                     </figure>
 
