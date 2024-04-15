@@ -20,9 +20,16 @@
             <select name="category_id" class="form-control">
                 <option value="">Select Category</option>
                 @foreach ($categories as $category)
-                    <option value="{{ $category->id }}">{{ $category->name }}</option>
+                    @foreach ($category->subcategories as $subcategory)
+                        <optgroup label="{{ $subcategory->name }}">
+                            @foreach ($subcategory->subcategories as $endsubcategory)
+                                <option value="{{ $endsubcategory->id }}">{{ $endsubcategory->name }}</option>
+                            @endforeach
+                        </optgroup>
+                    @endforeach
                 @endforeach
             </select>
+
 
             <button type="submit" class="btn btn-primary mt-4">Save and continue</button>
 

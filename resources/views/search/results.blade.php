@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Category')
+@section('title', 'Search results')
 
 @section('content')
 
@@ -42,7 +42,7 @@
                         <hr>
 
                         <h1 class="h5 mb-0">
-                            40,381 total results
+                            {{ count($listings) }} total results
                         </h1>
 
                     </div>
