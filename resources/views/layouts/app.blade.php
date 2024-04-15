@@ -16,7 +16,7 @@
 
     <link rel="stylesheet" href="/css/core.min.css?v=4">
 
-    <link rel="stylesheet" href="/css/vendor_bundle.min.css?v=2">
+    <link rel="stylesheet" href="/css/vendor_bundle.min.css?v=3">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
 
     <link rel="shortcut icon" href="/logo/icon.png">
