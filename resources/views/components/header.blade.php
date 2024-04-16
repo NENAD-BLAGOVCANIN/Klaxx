@@ -27,7 +27,7 @@
                 </button>
 
                 <a class="navbar-brand m-0" href="/">
-                    <img src="/images/logo/logo_dark.svg?v=2" class="w-100" style="max-width: 165px !important"
+                    <img src="/images/logo/logo.svg?v=2" class="w-100" style="max-width: 165px !important"
                         alt="...">
                 </a>
 
@@ -223,8 +223,8 @@
                         </button>
 
 
-                        <a class="navbar-brand" href="index.html">
-                            <img src="/images/logo/logo_dark.svg?v=2" width="110" height="38" alt="...">
+                        <a class="navbar-brand" href="/">
+                            <img src="/images/logo/logo.svg?v=2" width="110" height="38" alt="...">
                         </a>
 
                     </div>
