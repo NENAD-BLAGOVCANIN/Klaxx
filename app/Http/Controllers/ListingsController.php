@@ -139,7 +139,7 @@ class ListingsController extends Controller
                     ]);
                 }
             } catch (\Throwable $th) {
-                return redirect()->back()->with('error', 'Error uploading image: ' . $th->getMessage());
+               dd($th->getMessage());
             }
 
 
