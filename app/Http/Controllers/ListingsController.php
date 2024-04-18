@@ -124,19 +124,24 @@ class ListingsController extends Controller
 
         if ($request->method() == "POST") {
 
-            $request->validate([
-                'image' => 'image|mimes:jpeg,png,jpg,gif|max:2048' // Maximum file size is set to 2MB
-            ]);
-
-            if ($request->hasFile('image')) {
-                $image = $request->file('image');
-                $path = $image->store('listing_images', 'public');
-
-                ListingImage::create([
-                    'image_path' => '/storage/' . $path,
-                    'listing_id' => $listing_id,
+            try {
+                $request->validate([
+                    'image' => 'image|mimes:jpeg,png,jpg,gif|max:2048' // Maximum file size is set to 2MB
                 ]);
+
+                if ($request->hasFile('image')) {
+                    $image = $request->file('image');
+                    $path = $image->store('listing_images', 'public');
+
+                    ListingImage::create([
+                        'image_path' => '/storage/' . $path,
+                        'listing_id' => $listing_id,
+                    ]);
+                }
+            } catch (\Throwable $th) {
+                return redirect()->back()->with('error', 'Error uploading image: ' . $th->getMessage());
             }
+
 
             return redirect()->back()->with('success', 'Image uploaded successfully');
 

@@ -14,7 +14,7 @@
                 @foreach ($categoryAttributes as $attribute)
                     <div class="col-md-4 py-3">
                         <label for="{{ $attribute->attribute->name }}" class="pb-2">{{ $attribute->attribute->name }}</label>
-                        <input type="text" name="attribute_{{ $attribute->attribute->id }}"
+                        <input type="text" name="attribute_{{ $attribute->attribute->id }}" required
                             value="{{ old($attribute->attribute->name) }}" class="form-control">
                     </div>
                 @endforeach
