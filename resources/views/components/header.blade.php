@@ -103,7 +103,7 @@
 
                 <li class="list-inline-item mx-1 dropdown">
 
-                    <a href="/listings/create" class="btn btn-sm btn-pill btn-primary rounded-circle-xs">
+                    <a href="/listings/create" class="btn btn-sm btn-pill btn-primary rounded-circle-xs d-none d-sm-block">
 
                         <i class="fi fi-plus m-0-xs"></i>
                         <span class="px-2 d-none d-lg-inline-block">
