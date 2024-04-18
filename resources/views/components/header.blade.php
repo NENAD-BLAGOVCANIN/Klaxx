@@ -103,11 +103,28 @@
 
                 <li class="list-inline-item mx-1 dropdown">
 
-                    <a href="#" aria-label="My Account" id="dropdownAccountOptions" data-bs-toggle="dropdown"
-                        aria-expanded="false" aria-haspopup="true" class="d-inline-block text-center text-dark fw-500">
-                        <i class="fi fi-users fs-4"></i>
-                        <span class="d-block small fw-500">account</span>
+                    <a href="/listings/create" class="btn btn-sm btn-pill btn-primary rounded-circle-xs">
+
+                        <i class="fi fi-plus m-0-xs"></i>
+                        <span class="px-2 d-none d-lg-inline-block">
+                            New
+                        </span>
+
                     </a>
+
+                </li>
+
+                <li class="list-inline-item mx-1 dropdown ps-2">
+
+                    <a href="#" aria-label="My Account" id="dropdownAccountOptions" data-bs-toggle="dropdown"
+                        aria-expanded="false" aria-haspopup="true" class="d-inline-block bg-white rounded-circle">
+                        <img src="https://cdn.vectorstock.com/i/500p/63/42/avatar-photo-placeholder-icon-design-vector-30916342.jpg"
+                            class="rounded-circle" style="height: 35px; width: 35px; object-fit: cover" alt="">
+
+                    </a>
+                    <i data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true"
+                        class="fi fi-arrow-down text-muted bold m-0-xs" style="font-size: 8.5pt"></i>
+
 
 
                     <!-- dropdown -->
@@ -118,9 +135,9 @@
                         @if (Auth::check())
                             <div class="dropdown-header px-4 mb-1 text-wrap fw-medium">{{ auth()->user()->name }}</div>
                             <div class="dropdown-divider mb-3"></div>
-                            <a class="dropdown-item" href="/admin/dashboard">
-                                <svg class="text-gray-600 float-start" width="18px" height="18px" viewBox="0 0 16 16"
-                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+                            <a class="dropdown-item pb-3" href="/admin/dashboard">
+                                <svg class="text-gray-600 float-start" width="18px" height="18px"
+                                    viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
                                     <path fill-rule="evenodd"
                                         d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z">
                                     </path>
@@ -182,7 +199,7 @@
                                         Log in
                                     </a>
                                 </div>
-                                
+
                             </div>
                         @endif
 
@@ -245,14 +262,13 @@
 
                                     <div class="row col-border-md">
 
-                                        @foreach ($categories as $category)
+                                        @foreach ($categories->take(9) as $category)
                                             <div class="col-12 col-md-4">
-
                                                 <h3 class="h6 mt-4 mb-3">
                                                     {{ $category->name }}
                                                 </h3>
                                                 <ul class="prefix-link-icon prefix-icon-line">
-                                                    @foreach ($category->subcategories as $subcategory)
+                                                    @foreach ($category->subcategories->take(5) as $subcategory)
                                                         <li class="dropdown-item">
                                                             <a class="dropdown-link"
                                                                 href="{{ route('category.show', $subcategory->id) }}">{{ $subcategory->name }}</a>
@@ -261,6 +277,7 @@
                                                 </ul>
                                             </div>
                                         @endforeach
+
 
                                     </div>
                                 </li>
