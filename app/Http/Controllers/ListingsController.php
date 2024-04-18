@@ -132,9 +132,11 @@ class ListingsController extends Controller
                 if ($request->hasFile('image')) {
                     $image = $request->file('image');
                     $path = $image->store('listing_images', 'public');
-
+            
+                    $storagePath = str_replace('public', '', $path);
+            
                     ListingImage::create([
-                        'image_path' => '/storage/' . $path,
+                        'image_path' => '/storage/' . $storagePath,
                         'listing_id' => $listing_id,
                     ]);
                 }
