@@ -33,16 +33,13 @@
 
             </div>
 
-            <form action="/search?query=shoes" method="GET" data-autosuggest="on" data-mode="json"
+            <form action="/search?query=shoes" method="GET" data-autosuggest="off" data-mode="json"
                 data-json-max-results='10' data-json-related-title='Explore Smarty'
                 data-json-related-item-icon='fi fi-star-empty' data-json-suggest-title='Suggestions for you'
                 data-json-suggest-noresult='No results for' data-json-suggest-item-icon='fi fi-search'
                 data-json-suggest-min-score='5' data-json-highlight-term='true'
                 data-contentType='application/json; charset=utf-8' data-dataType='json' data-theme-class="danger"
                 data-container="#sow-search-container" data-input-min-length="2" data-input-delay="250"
-                data-related-keywords="" data-related-url="_ajax/search_suggest_related.json"
-                data-suggest-url="_ajax/search_suggest_input.json" data-related-action="related_get"
-                data-suggest-action="suggest_get"
                 class="js-ajax-search sow-search sow-search-mobile-float d-flex-1-1-auto m-0 mx-lg-5">
                 <div class="sow-search-input w-100">
 
