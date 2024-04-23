@@ -114,13 +114,12 @@
                 <li class="list-inline-item mx-1 dropdown ps-2">
 
                     <a href="#" aria-label="My Account" id="dropdownAccountOptions" data-bs-toggle="dropdown"
-                        aria-expanded="false" aria-haspopup="true" class="d-inline-block bg-white rounded-circle">
-                        <img src="https://cdn.vectorstock.com/i/500p/63/42/avatar-photo-placeholder-icon-design-vector-30916342.jpg"
-                            class="rounded-circle" style="height: 35px; width: 35px; object-fit: cover" alt="">
+                        aria-expanded="false" aria-haspopup="true" class="d-inline-block">
+                        <i class="fi fi-users fs-4 h4 m-0"></i>
 
                     </a>
                     <i data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true"
-                        class="fi fi-arrow-down text-muted bold m-0-xs" style="font-size: 8.5pt"></i>
+                        class="fi fi-arrow-down text-muted bold m-0-xs pt-1 ps-1" style="font-size: 8.5pt; cursor: pointer"></i>
 
 
 
