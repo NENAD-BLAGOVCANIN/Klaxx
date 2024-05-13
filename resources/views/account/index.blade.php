@@ -11,7 +11,7 @@
             <form method="post" action="#">
 
                 <h2 class="h4 mb-4">
-                    Evaluate your experience with <strong class="text-primary">Smarty</strong>
+                    Evaluate your experience with <strong class="text-primary">Klemmes</strong>
                 </h2>
 
                 <p class="small mb-4">
