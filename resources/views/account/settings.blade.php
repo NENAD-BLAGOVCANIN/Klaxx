@@ -24,8 +24,9 @@
                 <div class="w-100">
                     <strong class="d-block fs-5 fw-medium">Account detail</strong>
                     <ul class="list-unstyled small mb-0">
-                        <li class="list-item">Name: John Travolta</li>
-                        <li class="list-item">Phone: 1-800-565-2390</li>
+                        <li class="list-item pt-2 text-muted">Name: {{ auth()->user()->name }} </li>
+                        <li class="list-item pt-2 text-muted">Email: {{ auth()->user()->email }} </li>
+                        <li class="list-item pt-2 text-muted">Phone: {{ auth()->user()->phone }}</li>
                     </ul>
                 </div>
                 <div class="flex-none">
@@ -49,24 +50,24 @@
                     <div class="modal-body p-4">
 
                         <div class="row g-2">
-                            <div class="col-lg-6">
+                            <div class="col-12">
                                 <div class="form-floating">
-                                    <input required type="text" class="form-control" id="user-lname"
-                                        name="user[first_name]" placeholder="First name" value="John">
-                                    <label for="user-lname">First name</label>
+                                    <input required type="text" class="form-control" id="user-name"
+                                        name="name" placeholder="Full name" value="{{ auth()->user()->name }}">
+                                    <label for="user-name">Full name</label>
                                 </div>
                             </div>
-                            <div class="col-lg-6">
+                            <div class="col-12">
                                 <div class="form-floating">
-                                    <input required type="text" class="form-control" id="user-fname"
-                                        name="user[last_name]" placeholder="Prenume" value="Travolta">
-                                    <label for="user-fname">Last name</label>
+                                    <input required type="text" class="form-control" id="user-email"
+                                        name="email" placeholder="Email" value="{{ auth()->user()->email }}">
+                                    <label for="user-email">Email</label>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
                                     <input type="tel" class="form-control" id="user-phone" name="user[user_phone]"
-                                        placeholder="Phone" value="1-800-565-2390">
+                                        placeholder="Phone" value="{{ auth()->user()->phone }}">
                                     <label for="user-phone">Phone</label>
                                 </div>
                             </div>
@@ -86,77 +87,6 @@
                 </div>
             </form>
         </div>
-
-
-        <!-- email -->
-        <div class="card mb-3">
-            <div class="card-body d-flex justify-content-between">
-                <span class="flex-none pt-1" style="width:40px">
-                    <svg width="24" height="24" class="text-gray-300" xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="4"></circle>
-                        <path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-3.92 7.94"></path>
-                    </svg>
-                </span>
-                <span class="w-100">
-                    <strong class="d-block fs-5 fw-medium">Email address</strong>
-                    <small>Your current email address: john.doe@gmail.com</small>
-                </span>
-                <span class="flex-none">
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#modal-email-edit"
-                        class="bg-primary text-white rounded px-2 py-1 small">
-                        edit
-                    </a>
-                </span>
-            </div>
-        </div>
-
-        <!-- Modal : Email address -->
-        <div class="modal fade" id="modal-email-edit" tabindex="-1" aria-hidden="true">
-            <form method="post" action="#" novalidate class="no-validate modal-dialog modal-dialog-centered">
-
-                <div class="modal-content">
-                    <div class="modal-header border-0 pb-0 px-4">
-                        <h5 class="modal-title">Email address</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body p-4">
-
-                        <div class="row g-2">
-                            <div class="col-12">
-                                <div class="form-floating">
-                                    <input required type="email" class="form-control" id="user-newemail"
-                                        name="user[user_email]" placeholder="New email address" value=""
-                                        autocomplete="off">
-                                    <label for="user-newemail">New email address</label>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-floating">
-                                    <input required type="password" class="form-control" id="user-emailpassconfirm"
-                                        name="user[user_password]" placeholder="Account password" value=""
-                                        autocomplete="new-password">
-                                    <label for="user-emailpassconfirm">Account password</label>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="modal-footer border-0 pt-0">
-                        <button type="submit" class="btn btn-primary">
-                            <svg width="18px" height="18px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <polyline points="20 6 9 17 4 12"></polyline>
-                            </svg>
-                            <span class="ps-2">Save changes</span>
-                        </button>
-                    </div>
-                </div>
-            </form>
-        </div>
-
 
         <!-- password -->
         <div class="card mb-3">
