@@ -14,10 +14,12 @@ Route::get('/categories/{category_id}', [CategoryController::class, 'show'])->na
 
 
 Route::middleware('auth')->group(function () {
-    Route::get('/account', [AccountController::class, 'index'])->name('account.index');
 
+    ### Account
+    Route::get('/account', [AccountController::class, 'index'])->name('account.index');
     Route::get('/account-settings', [AccountController::class, 'settings'])->name('account.settings');
 
+    ### Search
     Route::get('/search', [SearchController::class, 'results'])->name('search.results');
 
     Route::get('/listings/view/{listing_id}', [ListingsController::class, 'view'])->name('listings.view');

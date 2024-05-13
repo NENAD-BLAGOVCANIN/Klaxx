@@ -148,7 +148,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link px-0 d-flex align-items-center" href="account-settings.html">
+                    <a class="nav-link px-0 d-flex align-items-center" href="/account-settings">
                         <svg class="text-gray-600 float-start" width="18px" height="18px" viewBox="0 0 16 16"
                             xmlns="http://www.w3.org/2000/svg" fill="currentColor">
                             <path fill-rule="evenodd"

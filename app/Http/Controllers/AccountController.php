@@ -14,11 +14,13 @@ class AccountController extends Controller
 
     public function index(Request $request): View
     {
-        return view('account.index', [
-            'user' => $request->user(),
-        ]);
+        return view('account.index');
     }
 
+
+    public function settings(Request $request){
+        return view('account.settings');
+    }
 
     public function update(ProfileUpdateRequest $request): RedirectResponse
     {
