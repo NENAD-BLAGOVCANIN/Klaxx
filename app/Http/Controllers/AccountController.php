@@ -22,6 +22,10 @@ class AccountController extends Controller
         return view('account.settings');
     }
 
+    public function privacy(Request $request){
+        return view('account.privacy');
+    }
+
     public function update(ProfileUpdateRequest $request): RedirectResponse
     {
         $request->user()->fill($request->validated());

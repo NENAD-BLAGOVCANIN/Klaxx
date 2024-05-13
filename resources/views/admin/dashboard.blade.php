@@ -98,7 +98,7 @@
                                 <ul class="nav flex-column">
                                     <li class="nav-item"><a class="nav-link" href="page-account-profile.html">Profile</a>
                                     </li>
-                                    <li class="nav-item"><a class="nav-link" href="page-account-settings.html">Settings</a>
+                                    <li class="nav-item"><a class="nav-link" href="/account/settings">Settings</a>
                                     </li>
                                 </ul>
                             </li>

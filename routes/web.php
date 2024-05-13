@@ -17,7 +17,8 @@ Route::middleware('auth')->group(function () {
 
     ### Account
     Route::get('/account', [AccountController::class, 'index'])->name('account.index');
-    Route::get('/account-settings', [AccountController::class, 'settings'])->name('account.settings');
+    Route::get('/account/settings', [AccountController::class, 'settings'])->name('account.settings');
+    Route::get('/account/privacy', [AccountController::class, 'privacy'])->name('account.privacy');
 
     ### Search
     Route::get('/search', [SearchController::class, 'results'])->name('search.results');
