@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\AccountController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\HomeController;
@@ -14,9 +14,9 @@ Route::get('/categories/{category_id}', [CategoryController::class, 'show'])->na
 
 
 Route::middleware('auth')->group(function () {
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+    Route::get('/account', [AccountController::class, 'index'])->name('account.index');
+
+    Route::get('/account-settings', [AccountController::class, 'settings'])->name('account.settings');
 
     Route::get('/search', [SearchController::class, 'results'])->name('search.results');
 

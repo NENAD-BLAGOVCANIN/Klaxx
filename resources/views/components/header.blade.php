@@ -169,8 +169,8 @@
                                     </path>
                                 </svg> <span>My Listings</span>
                             </a>
-                            <a class="dropdown-item {{ Request::is('my-listings') ? 'active' : '' }}"
-                                href="/my-listings">
+                            <a class="dropdown-item {{ Request::is('account') ? 'active' : '' }}"
+                                href="/account">
                                 <svg class="text-gray-600 float-start" width="18px" height="18px"
                                     viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
                                     <path fill-rule="evenodd"
