@@ -100,7 +100,8 @@
 
                 <li class="list-inline-item mx-1 dropdown">
 
-                    <a href="/listings/create" class="btn btn-sm btn-pill btn-primary rounded-circle-xs d-none d-sm-block">
+                    <a href="/listings/create"
+                        class="btn btn-sm btn-pill btn-primary rounded-circle-xs d-none d-sm-block">
 
                         <i class="fi fi-plus m-0-xs"></i>
                         <span class="px-2 d-none d-lg-inline-block">
@@ -119,7 +120,8 @@
 
                     </a>
                     <i data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true"
-                        class="fi fi-arrow-down text-muted bold m-0-xs pt-1 ps-1" style="font-size: 8.5pt; cursor: pointer"></i>
+                        class="fi fi-arrow-down text-muted bold m-0-xs pt-1 ps-1"
+                        style="font-size: 8.5pt; cursor: pointer"></i>
 
 
                     <!-- dropdown -->
@@ -131,19 +133,19 @@
                             <div class="dropdown-header px-4 mb-1 text-wrap fw-medium">{{ auth()->user()->name }}</div>
                             <div class="dropdown-divider mb-3"></div>
                             @if (auth()->user()->is_admin)
-                            <a class="dropdown-item pb-3" href="/admin/dashboard">
-                                <svg class="text-gray-600 float-start" width="18px" height="18px"
-                                    viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
-                                    <path fill-rule="evenodd"
-                                        d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z">
-                                    </path>
-                                    <path fill-rule="evenodd"
-                                        d="M9.5 1h-3a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3zm4.354 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z">
-                                    </path>
-                                </svg>
-                                <span>Dashboard</span>
-                            </a>
-                            <div class="dropdown-divider mb-3"></div>
+                                <a class="dropdown-item pb-3" href="/admin/dashboard">
+                                    <svg class="text-gray-600 float-start" width="18px" height="18px"
+                                        viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z">
+                                        </path>
+                                        <path fill-rule="evenodd"
+                                            d="M9.5 1h-3a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3zm4.354 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z">
+                                        </path>
+                                    </svg>
+                                    <span>Dashboard</span>
+                                </a>
+                                <div class="dropdown-divider mb-3"></div>
                             @endif
                             <a class="dropdown-item {{ Request::is('/') ? 'active' : '' }}" href="/">
                                 <svg class="text-gray-600 float-start" width="18px" height="18px"
@@ -169,29 +171,14 @@
                                     </path>
                                 </svg> <span>My Listings</span>
                             </a>
-                            <a class="dropdown-item {{ Request::is('account') ? 'active' : '' }}"
-                                href="/account">
-                                <svg class="text-gray-600 float-start" width="18px" height="18px"
-                                    viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
-                                    <path fill-rule="evenodd"
-                                        d="M10.273 2.513l-.921-.944.715-.698.622.637.89-.011a2.89 2.89 0 0 1 2.924 2.924l-.01.89.636.622a2.89 2.89 0 0 1 0 4.134l-.637.622.011.89a2.89 2.89 0 0 1-2.924 2.924l-.89-.01-.622.636a2.89 2.89 0 0 1-4.134 0l-.622-.637-.89.011a2.89 2.89 0 0 1-2.924-2.924l.01-.89-.636-.622a2.89 2.89 0 0 1 0-4.134l.637-.622-.011-.89a2.89 2.89 0 0 1 2.924-2.924l.89.01.622-.636a2.89 2.89 0 0 1 4.134 0l-.715.698a1.89 1.89 0 0 0-2.704 0l-.92.944-1.32-.016a1.89 1.89 0 0 0-1.911 1.912l.016 1.318-.944.921a1.89 1.89 0 0 0 0 2.704l.944.92-.016 1.32a1.89 1.89 0 0 0 1.912 1.911l1.318-.016.921.944a1.89 1.89 0 0 0 2.704 0l.92-.944 1.32.016a1.89 1.89 0 0 0 1.911-1.912l-.016-1.318.944-.921a1.89 1.89 0 0 0 0-2.704l-.944-.92.016-1.32a1.89 1.89 0 0 0-1.912-1.911l-1.318.016z">
-                                    </path>
-                                    <path fill-rule="evenodd"
-                                        d="M10.354 6.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708 0z">
-                                    </path>
-                                </svg> <span>My Account</span>
+                            <a class="dropdown-item {{ Request::is('account') ? 'active' : '' }}" href="/account">
+                                <i class="far fa-user text-gray-600 float-start"></i> <span>My Account</span>
                             </a>
 
                             <div class="dropdown-divider mt-3"></div>
-                            <form method="POST" action="/logout">
-                                @csrf
-                                <button class="btn w-100" type="submit">
-                                    <span class="dropdown-item mt-1">
-                                        <i class="fi fi-power float-start"></i>
-                                        Log Out
-                                    </span>
-                                </button>
-                            </form>
+                            <a class="dropdown-item" href="/logout">
+                                <i class="fi fi-power text-gray-600"></i> <span>Log out</span>
+                            </a>
                         @else
                             <div class="dropdown-header px-4 mb-1 text-wrap fw-medium">Welcome to Klemmes !</div>
 

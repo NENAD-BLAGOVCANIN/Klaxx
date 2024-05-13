@@ -101,7 +101,7 @@
                 </span>
                 <span class="w-100">
                     <strong class="d-block fs-5 fw-medium">Account password</strong>
-                    <small>Is a good idea to have a strong password you don't use it elsewhere.</small>
+                    <small class="text-muted">Is a good idea to have a strong password you don't use it elsewhere.</small>
                 </span>
                 <span class="flex-none">
                     <a href="#" data-bs-toggle="modal" data-bs-target="#modal-passwd-edit"
@@ -193,7 +193,7 @@
                     </span>
                     <span class="w-100">
                         <strong class="d-block fs-5 fw-medium">Account delete</strong>
-                        <small>This is a permanent action! Please be sure you want to delete your
+                        <small class="text-muted">This is a permanent action! Please be sure you want to delete your
                             account!</small>
                     </span>
                     <span class="flex-none">

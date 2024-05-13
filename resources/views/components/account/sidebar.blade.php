@@ -159,30 +159,10 @@
                     </a>
                 </li>
 
-                <li class="nav-item">
-                    <a class="nav-link px-0 d-flex align-items-center" href="#">
-                        <span class="group-icon">
-                            <i class="fi fi-arrow-end"></i>
-                            <i class="fi fi-arrow-down"></i>
-                        </span>
-
-                        <span class="px-2 d-inline-block">
-                            Multi level
-                        </span>
-                    </a>
-
-                    <ul class="nav flex-column px-3">
-                        <li class="nav-item"><a class="nav-link" href="#">Option 1</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Option 2</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Option 3</a></li>
-                    </ul>
-
-                </li>
-
                 <li class="nav-item border-top my-3"></li>
 
                 <li class="nav-item">
-                    <a class="nav-link px-0" href="#">
+                    <a class="nav-link px-0" href="/logout">
                         <i class="fi fi-power float-start"></i>
                         Log Out
                     </a>
