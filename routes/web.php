@@ -17,7 +17,8 @@ Route::middleware('auth')->group(function () {
 
     ### Account
     Route::get('/account', [AccountController::class, 'index'])->name('account.index');
-    Route::get('/account/settings', [AccountController::class, 'settings'])->name('account.settings');
+    Route::match(['get', 'post'], '/account/settings', [AccountController::class, 'settings'])->name('account.settings');
+    Route::post('/account/settings/change-password', [AccountController::class, 'changePassword'])->name('account.change-password');
     Route::get('/account/privacy', [AccountController::class, 'privacy'])->name('account.privacy');
 
     ### Search

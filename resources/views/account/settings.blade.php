@@ -41,6 +41,7 @@
         <!-- Modal : May detail -->
         <div class="modal fade" id="modal-account-edit" tabindex="-1" aria-hidden="true">
             <form method="post" action="#" novalidate class="bs-validate modal-dialog modal-dialog-centered">
+                @csrf
 
                 <div class="modal-content">
                     <div class="modal-header border-0 pb-0 px-4">
@@ -52,21 +53,21 @@
                         <div class="row g-2">
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <input required type="text" class="form-control" id="user-name"
-                                        name="name" placeholder="Full name" value="{{ auth()->user()->name }}">
+                                    <input required type="text" class="form-control" id="user-name" name="name"
+                                        placeholder="Full name" value="{{ auth()->user()->name }}">
                                     <label for="user-name">Full name</label>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <input required type="text" class="form-control" id="user-email"
-                                        name="email" placeholder="Email" value="{{ auth()->user()->email }}">
+                                    <input required type="text" class="form-control" id="user-email" name="email"
+                                        placeholder="Email" value="{{ auth()->user()->email }}">
                                     <label for="user-email">Email</label>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <input type="tel" class="form-control" id="user-phone" name="user[user_phone]"
+                                    <input type="tel" class="form-control" id="user-phone" name="phone"
                                         placeholder="Phone" value="{{ auth()->user()->phone }}">
                                     <label for="user-phone">Phone</label>
                                 </div>
@@ -114,10 +115,10 @@
 
         <!-- Modal : Password -->
         <div class="modal fade" id="modal-passwd-edit" tabindex="-1" aria-hidden="true">
-            <form method="post" action="#" class="form-validate modal-dialog modal-dialog-centered">
+            <form method="post" action="/account/settings/change-password"
+                class="form-validate modal-dialog modal-dialog-centered">
 
-                <input tabindex="-1" class="d-none" type="text" name="csrf_token" value="">
-                <input tabindex="-1" class="d-none" type="text" name="action" value="user:password:edit">
+                @csrf
 
                 <div class="modal-content">
                     <div class="modal-header border-0 pb-0 px-4">
@@ -125,7 +126,6 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body p-4">
-
                         <div class="row g-2">
                             <div class="col-12">
                                 <div class="form-floating">
@@ -136,7 +136,6 @@
                                 </div>
                             </div>
                             <div class="col-12">
-
                                 <div class="input-group-over">
                                     <div class="form-floating mb-3">
                                         <input required placeholder="New password" id="user-newpass" type="password"
@@ -144,8 +143,6 @@
                                             autocomplete="new-password">
                                         <label for="user-newpass">New password</label>
                                     </div>
-
-                                    <!-- `SOW : Form Advanced` plugin used -->
                                     <a href="#" class="btn smaller btn-password-type-toggle"
                                         data-target="#user-newpass">
                                         <span class="group-icon">
@@ -154,10 +151,16 @@
                                         </span>
                                     </a>
                                 </div>
-
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating mb-3">
+                                    <input required placeholder="Confirm new password" id="user-newpass-confirmation"
+                                        type="password" name="user[user_password_new_confirmation]" class="form-control"
+                                        autocomplete="new-password">
+                                    <label for="user-newpass-confirmation">Confirm new password</label>
+                                </div>
                             </div>
                         </div>
-
                     </div>
                     <div class="modal-footer border-0 pt-0">
                         <button type="submit" class="btn btn-primary">
@@ -175,10 +178,10 @@
 
 
         <!-- account delete
-    user_area
-      0 = any
-      1 = admin
-      2 = frontend -->
+        user_area
+          0 = any
+          1 = admin
+          2 = frontend -->
         <div class="position-relative mb-3">
 
             <div class="card">
