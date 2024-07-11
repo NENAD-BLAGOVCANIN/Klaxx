@@ -132,7 +132,7 @@
                         @if (Auth::check())
                             <div class="dropdown-header px-4 mb-1 text-wrap fw-medium">{{ auth()->user()->name }}</div>
                             <div class="dropdown-divider mb-3"></div>
-                            @if (auth()->user()->is_admin)
+                            @if (auth()->user()->role == 'admin')
                                 <a class="dropdown-item pb-3" href="/admin/dashboard">
                                     <svg class="text-gray-600 float-start" width="18px" height="18px"
                                         viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
