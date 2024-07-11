@@ -66,6 +66,26 @@ class AccountController extends Controller
     
         return redirect()->back()->with('success', 'Password changed successfully.');
     }
+
+    public function updateUserAvatar(Request $request)
+    {
+        $request->validate([
+            'avatar' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+        ]);
+
+        $profilePicture = $request->file('avatar');
+
+        $filename = time() . '_' . $profilePicture->getClientOriginalName();
+
+        $profilePicture->storeAs('/images/avatar', $filename, ['disk' => 'public']);
+
+        $user = auth()->user();
+        $user->avatar = '/storage/images/avatar/' . $filename;
+        $user->save();
+
+        return redirect('/account');
+    }
+
     
 
     public function privacy(Request $request){

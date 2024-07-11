@@ -19,6 +19,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/account', [AccountController::class, 'index'])->name('account.index');
     Route::match(['get', 'post'], '/account/settings', [AccountController::class, 'settings'])->name('account.settings');
     Route::post('/account/settings/change-password', [AccountController::class, 'changePassword'])->name('account.change-password');
+    Route::post('/account/settings/update-user-avatar', [AccountController::class, 'updateUserAvatar'])->name('account.update-user-avatar');
     Route::get('/account/privacy', [AccountController::class, 'privacy'])->name('account.privacy');
 
     ### Search
@@ -33,7 +34,6 @@ Route::middleware('auth')->group(function () {
     Route::post('/listings/{listing_id}/publish', [ListingsController::class, 'publish'])->name('listings.publish');
 
 });
-
 
 Route::prefix('admin')->group(function () {
     Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');

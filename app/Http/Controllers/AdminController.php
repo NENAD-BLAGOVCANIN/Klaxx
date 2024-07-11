@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\User;
 
 class AdminController extends Controller
 {
@@ -24,6 +25,9 @@ class AdminController extends Controller
             return abort(403, 'Access Denied');
         }
 
-        return view('admin.users');
+        $usersCount = User::all()->count();
+        $users = User::all();
+
+        return view('admin.users', compact('usersCount', 'users'));
     }
 }

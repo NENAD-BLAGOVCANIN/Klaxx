@@ -1,3 +1,48 @@
+<style>
+    #user-profile-photo {
+        width: 68px;
+        height: 68px;
+        object-fit: cover;
+    }
+    .profile-image-container {
+        position: relative;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+    .profile-image {
+        display: block;
+        color: #ccc;
+    }
+
+    .hover-text {
+        display: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        cursor: pointer;
+        transform: translate(-50%, -50%);
+        background-color: rgba(0, 0, 0, 0.7);
+        color: #fff;
+        height: 68px;
+        width: 68px;
+        font-size: 10pt;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+    }
+
+    .file-input {
+        display: none;
+    }
+
+    .profile-image-container:hover .hover-text {
+        display: flex;
+    }
+</style>
+
 <nav class="sticky-kit nav-deep nav-deep-light">
 
     <div class="card">
@@ -21,26 +66,28 @@
 
             <!-- navbar : navigation -->
             <ul id="nav_responsive" class="nav flex-column d-none d-lg-block mt-1 mt-lg-0">
-                <li><!-- account name -->
-                    <div class="d-flex align-items-center mb-2 pb-4 border-bottom">
-                        <div class="flex-none p-3 border rounded-circle">
-                            <svg class="text-gray-300" width="34px" height="34px" xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 460.8 460.8" fill="currentColor">
-                                <path
-                                    d="M230.432,0c-65.829,0-119.641,53.812-119.641,119.641s53.812,119.641,119.641,119.641s119.641-53.812,119.641-119.641S296.261,0,230.432,0z">
-                                </path>
-                                <path
-                                    d="M435.755,334.89c-3.135-7.837-7.314-15.151-12.016-21.943c-24.033-35.527-61.126-59.037-102.922-64.784c-5.224-0.522-10.971,0.522-15.151,3.657c-21.943,16.196-48.065,24.555-75.233,24.555s-53.29-8.359-75.233-24.555c-4.18-3.135-9.927-4.702-15.151-3.657c-41.796,5.747-79.412,29.257-102.922,64.784c-4.702,6.792-8.882,14.629-12.016,21.943c-1.567,3.135-1.045,6.792,0.522,9.927c4.18,7.314,9.404,14.629,14.106,20.898c7.314,9.927,15.151,18.808,24.033,27.167c7.314,7.314,15.673,14.106,24.033,20.898c41.273,30.825,90.906,47.02,142.106,47.02s100.833-16.196,142.106-47.02c8.359-6.269,16.718-13.584,24.033-20.898c8.359-8.359,16.718-17.241,24.033-27.167c5.224-6.792,9.927-13.584,14.106-20.898C436.8,341.682,437.322,338.024,435.755,334.89z">
-                                </path>
-                            </svg>
+                <li>
+                    <form id="profile-form" action="/account/settings/update-user-avatar" method="post" enctype="multipart/form-data">
+                        @csrf
+                        <div class="d-flex align-items-center mb-2 pb-4 border-bottom">
+
+                            <div class="profile-image-container">
+                                <img src="{{ auth()->user()->avatar }}" class="rounded-circle"
+                                    id="user-profile-photo" alt="" loading="lazy">
+
+                                <label for="profile-picture-input" class="hover-text" id="change-picture-label">
+                                    <span class="text-center">Change Image</span>
+                                </label>
+                                <input type="file" id="profile-picture-input" name="avatar" class="file-input" accept="image/*">
+                            </div>
+                            <div class="w-100 px-3">
+                                <span>Hello,</span>
+                                <span class="d-block fw-bold">
+                                    {{ auth()->user()->name }}
+                                </span>
+                            </div>
                         </div>
-                        <div class="w-100 px-3">
-                            <span>Hello,</span>
-                            <span class="d-block fw-bold">
-                                {{ auth()->user()->name }}
-                            </span>
-                        </div>
-                    </div>
+                    </form>
                 </li>
                 <li class="nav-item {{ Request::is('account') ? 'active' : '' }}">
                     <a class="nav-link px-0 d-flex align-items-center" href="/account">
@@ -180,3 +227,17 @@
     </div>
 
 </nav>
+
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var fileInput = document.getElementById("profile-picture-input");
+        var profileForm = document.getElementById("profile-form");
+
+        fileInput.onchange = function() {
+            profileForm.submit();
+        };
+
+    });
+</script>

@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Klemmes - classifieds website in Europe & Asia</title>
+    <title>Vidaki - Classifieds Website in Europe & Asia</title>
     <meta name="description" content="...">
 
     <meta name="viewport" content="width=device-width, maximum-scale=5, initial-scale=1">
