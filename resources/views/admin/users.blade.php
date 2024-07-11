@@ -124,11 +124,11 @@
                                     data-bs-toggle="dropdown" data-bs-auto-close="outside" placeholder="Name / email">
 
                                 <!--
-                              .dropdown-mega-sm
-                              .dropdown-mega-md
-                              .dropdown-mega-lg
-                              .dropdown-mega-xl
-                            -->
+                                              .dropdown-mega-sm
+                                              .dropdown-mega-md
+                                              .dropdown-mega-lg
+                                              .dropdown-mega-xl
+                                            -->
                                 <div class="dropdown-menu dropdown-mega-sm shadow-lg p-4 mt-1">
                                     <h6 class="mb-4">Filter</h6>
 
@@ -300,110 +300,123 @@
                         </thead>
                         <tbody id="checkall-list">
 
-                            @foreach($users as $user)
-                            <tr>
-                                <td><!-- user -->
-                                    <div class="d-flex align-items-center">
-                                        <div class="avatar avatar-sm rounded-circle"
-                                            style="background-image:url(../html_frontend/demo.files/images/avatar/jessica_barden.jpg)">
+                            @foreach ($users as $user)
+                                <tr>
+                                    <td><!-- user -->
+                                        <div class="d-flex align-items-center">
+                                            <img class="avatar avatar-sm rounded-circle" src="{{ $user->avatar }}">
+                                            </img>
+                                            <div class="ms-3">
+                                                <a href="#!" class="link-normal fw-medium">{{ $user->name }}</a>
+                                                <small class="d-block">{{ $user->email }}</small>
+                                            </div>
                                         </div>
-                                        <div class="ms-3">
-                                            <a href="#!" class="link-normal fw-medium">{{ $user->name }}</a>
-                                            <small class="d-block">{{ $user->email }}</small>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td><!-- date -->
-                                    <span class="d-block text-muted small">{{ $user->created_at }}</span>
-                                </td>
-                                <td class="text-center"><!-- orders -->
-                                    0
-                                </td>
-                                <td class="text-success"><!-- status -->
-                                    Active
-                                </td>
-                                <td class="dropstart text-end"><!-- options -->
-                                    <a class="btn btn-sm btn-light btn-ghost btn-icon text-muted rounded-circle"
-                                        href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                        <span class="group-icon">
-                                            <svg width="18px" height="18px" viewBox="0 0 16 16"
-                                                xmlns="http://www.w3.org/2000/svg" fill="currentColor">
-                                                <path fill-rule="evenodd"
-                                                    d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z">
-                                                </path>
-                                            </svg>
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="18px" height="18px"
-                                                viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                <line x1="18" y1="6" x2="6" y2="18">
-                                                </line>
-                                                <line x1="6" y1="6" x2="18" y2="18">
-                                                </line>
-                                            </svg>
-                                        </span>
-                                    </a>
-                                    <ul class="dropdown-menu dropdown-menu-clean">
-                                        <li class="small px-3 py-2 text-muted">Set user</li>
-                                        <li>
-                                            <a class="dropdown-item" href="#">
-                                                <svg class="text-muted" width="18px" height="18px"
-                                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                                    stroke-linejoin="round">
-                                                    <polyline points="20 6 9 17 4 12"></polyline>
-                                                </svg>
-                                                <span>Active</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="dropdown-item" href="#">
-                                                <svg class="text-muted" width="18px" height="18px"
-                                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                                    stroke-linejoin="round">
-                                                    <line x1="18" y1="6" x2="6" y2="18">
-                                                    </line>
-                                                    <line x1="6" y1="6" x2="18" y2="18">
-                                                    </line>
-                                                </svg>
-                                                <span>Innactive</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="dropdown-item" href="#">
-                                                <svg class="text-muted" width="18px" height="18px"
-                                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                                    stroke-linejoin="round">
-                                                    <line x1="18" y1="6" x2="6" y2="18">
-                                                    </line>
-                                                    <line x1="6" y1="6" x2="18" y2="18">
-                                                    </line>
-                                                </svg>
-                                                <span>Banned</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="dropdown-item" href="#">
-                                                <svg class="text-danger" width="18px" height="18px"
-                                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                                    stroke-linejoin="round">
-                                                    <polyline points="3 6 5 6 21 6"></polyline>
-                                                    <path
-                                                        d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2">
+                                    </td>
+                                    <td><!-- date -->
+                                        <span class="d-block text-muted small">{{ $user->created_at }}</span>
+                                    </td>
+                                    <td class="text-center"><!-- orders -->
+                                        0
+                                    </td>
+                                    <td class="text-success"><!-- status -->
+                                        Active
+                                    </td>
+                                    <td class="dropstart text-end"><!-- options -->
+                                        <a class="btn btn-sm btn-light btn-ghost btn-icon text-muted rounded-circle"
+                                            href="#" role="button" data-bs-toggle="dropdown"
+                                            aria-expanded="false">
+                                            <span class="group-icon">
+                                                <svg width="18px" height="18px" viewBox="0 0 16 16"
+                                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+                                                    <path fill-rule="evenodd"
+                                                        d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z">
                                                     </path>
-                                                    <line x1="10" y1="11" x2="10" y2="17">
+                                                </svg>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="18px" height="18px"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                    <line x1="18" y1="6" x2="6" y2="18">
                                                     </line>
-                                                    <line x1="14" y1="11" x2="14" y2="17">
+                                                    <line x1="6" y1="6" x2="18" y2="18">
                                                     </line>
                                                 </svg>
-                                                <span class="w-100">Delete</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </td>
-                            </tr>
+                                            </span>
+                                        </a>
+                                        <ul class="dropdown-menu dropdown-menu-clean">
+                                            <li class="small px-3 py-2 text-muted">Set user</li>
+                                            <li>
+                                                <a class="dropdown-item" href="#"
+                                                    onclick="event.preventDefault(); document.getElementById('delete-form').submit();">
+                                                    <svg class="text-danger" width="18px" height="18px"
+                                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                        fill="none" stroke="currentColor" stroke-width="2"
+                                                        stroke-linecap="round" stroke-linejoin="round">
+                                                        <polyline points="3 6 5 6 21 6"></polyline>
+                                                        <path
+                                                            d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2">
+                                                        </path>
+                                                        <line x1="10" y1="11" x2="10"
+                                                            y2="17"></line>
+                                                        <line x1="14" y1="11" x2="14"
+                                                            y2="17"></line>
+                                                    </svg>
+                                                    <span class="w-100">Delete</span>
+                                                </a>
+                                                <form id="delete-form" action="/admin/users/remove-user" method="POST"
+                                                    style="display: none;">
+                                                    @csrf
+                                                    <input type="hidden" name="user_id" value="{{ $user->id }}">
+                                                </form>
+                                            </li>
+
+                                            @if($user->role == 'customer')
+                                            <li>
+                                                <a class="dropdown-item" href="#"
+                                                    onclick="event.preventDefault(); document.getElementById('admin-role-form').submit();">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="18px" height="18px"
+                                                        fill="currentColor" class="bi bi-person-check-fill"
+                                                        viewBox="0 0 16 16">
+                                                        <path fill-rule="evenodd"
+                                                            d="M15.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L12.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0" />
+                                                        <path
+                                                            d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
+                                                    </svg>
+                                                    <span class="w-100">Assign admin role</span>
+                                                </a>
+                                                <form id="admin-role-form" action="/admin/users/set-role" method="POST"
+                                                    style="display: none;">
+                                                    @csrf
+                                                    <input type="hidden" name="user_id" value="{{ $user->id }}">
+                                                    <input type="hidden" name="role" value="admin">
+                                                </form>
+                                            </li>
+                                            @else
+                                            <li>
+                                                <a class="dropdown-item" href="#"
+                                                    onclick="event.preventDefault(); document.getElementById('customer-role-form').submit();">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="18px" height="18px"
+                                                        fill="currentColor" class="bi bi-person-check-fill"
+                                                        viewBox="0 0 16 16">
+                                                        <path fill-rule="evenodd"
+                                                            d="M15.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L12.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0" />
+                                                        <path
+                                                            d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
+                                                    </svg>
+                                                    <span class="w-100">Assign customer role</span>
+                                                </a>
+                                                <form id="customer-role-form" action="/admin/users/set-role"
+                                                    method="POST" style="display: none;">
+                                                    @csrf
+                                                    <input type="hidden" name="user_id" value="{{ $user->id }}">
+                                                    <input type="hidden" name="role" value="customer">
+                                                </form>
+                                            </li>
+                                            @endif
+
+
+                                        </ul>
+                                    </td>
+                                </tr>
                             @endforeach
 
                         </tbody>

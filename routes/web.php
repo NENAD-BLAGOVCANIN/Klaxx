@@ -38,6 +38,9 @@ Route::middleware('auth')->group(function () {
 Route::prefix('admin')->group(function () {
     Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
     Route::get('/users', [AdminController::class, 'users'])->name('admin.users');
+    Route::post('/users/remove-user', [AdminController::class, 'removeUser'])->name('admin.removeUser');
+    Route::post('/users/set-role', [AdminController::class, 'setRole'])->name('admin.setRole');
+
 });
 
 
