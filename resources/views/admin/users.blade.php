@@ -124,11 +124,11 @@
                                     data-bs-toggle="dropdown" data-bs-auto-close="outside" placeholder="Name / email">
 
                                 <!--
-                                              .dropdown-mega-sm
-                                              .dropdown-mega-md
-                                              .dropdown-mega-lg
-                                              .dropdown-mega-xl
-                                            -->
+                                                  .dropdown-mega-sm
+                                                  .dropdown-mega-md
+                                                  .dropdown-mega-lg
+                                                  .dropdown-mega-xl
+                                                -->
                                 <div class="dropdown-menu dropdown-mega-sm shadow-lg p-4 mt-1">
                                     <h6 class="mb-4">Filter</h6>
 
@@ -344,6 +344,52 @@
                                         </a>
                                         <ul class="dropdown-menu dropdown-menu-clean">
                                             <li class="small px-3 py-2 text-muted">Set user</li>
+
+
+                                            @if ($user->role == 'customer')
+                                                <li>
+                                                    <a class="dropdown-item" href="#"
+                                                        onclick="event.preventDefault(); document.getElementById('admin-role-form').submit();">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="18px"
+                                                            height="18px" fill="currentColor"
+                                                            class="bi bi-person-check-fill" viewBox="0 0 16 16">
+                                                            <path fill-rule="evenodd"
+                                                                d="M15.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L12.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0" />
+                                                            <path
+                                                                d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
+                                                        </svg>
+                                                        <span class="w-100">Assign admin role</span>
+                                                    </a>
+                                                    <form id="admin-role-form" action="/admin/users/set-role"
+                                                        method="POST" style="display: none;">
+                                                        @csrf
+                                                        <input type="hidden" name="user_id" value="{{ $user->id }}">
+                                                        <input type="hidden" name="role" value="admin">
+                                                    </form>
+                                                </li>
+                                            @else
+                                                <li>
+                                                    <a class="dropdown-item" href="#"
+                                                        onclick="event.preventDefault(); document.getElementById('customer-role-form').submit();">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="18px"
+                                                            height="18px" fill="currentColor"
+                                                            class="bi bi-person-check-fill" viewBox="0 0 16 16">
+                                                            <path fill-rule="evenodd"
+                                                                d="M15.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L12.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0" />
+                                                            <path
+                                                                d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
+                                                        </svg>
+                                                        <span class="w-100">Assign customer role</span>
+                                                    </a>
+                                                    <form id="customer-role-form" action="/admin/users/set-role"
+                                                        method="POST" style="display: none;">
+                                                        @csrf
+                                                        <input type="hidden" name="user_id" value="{{ $user->id }}">
+                                                        <input type="hidden" name="role" value="customer">
+                                                    </form>
+                                                </li>
+                                            @endif
+
                                             <li>
                                                 <a class="dropdown-item" href="#"
                                                     onclick="event.preventDefault(); document.getElementById('delete-form').submit();">
@@ -368,51 +414,6 @@
                                                     <input type="hidden" name="user_id" value="{{ $user->id }}">
                                                 </form>
                                             </li>
-
-                                            @if($user->role == 'customer')
-                                            <li>
-                                                <a class="dropdown-item" href="#"
-                                                    onclick="event.preventDefault(); document.getElementById('admin-role-form').submit();">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="18px" height="18px"
-                                                        fill="currentColor" class="bi bi-person-check-fill"
-                                                        viewBox="0 0 16 16">
-                                                        <path fill-rule="evenodd"
-                                                            d="M15.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L12.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0" />
-                                                        <path
-                                                            d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
-                                                    </svg>
-                                                    <span class="w-100">Assign admin role</span>
-                                                </a>
-                                                <form id="admin-role-form" action="/admin/users/set-role" method="POST"
-                                                    style="display: none;">
-                                                    @csrf
-                                                    <input type="hidden" name="user_id" value="{{ $user->id }}">
-                                                    <input type="hidden" name="role" value="admin">
-                                                </form>
-                                            </li>
-                                            @else
-                                            <li>
-                                                <a class="dropdown-item" href="#"
-                                                    onclick="event.preventDefault(); document.getElementById('customer-role-form').submit();">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="18px" height="18px"
-                                                        fill="currentColor" class="bi bi-person-check-fill"
-                                                        viewBox="0 0 16 16">
-                                                        <path fill-rule="evenodd"
-                                                            d="M15.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L12.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0" />
-                                                        <path
-                                                            d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
-                                                    </svg>
-                                                    <span class="w-100">Assign customer role</span>
-                                                </a>
-                                                <form id="customer-role-form" action="/admin/users/set-role"
-                                                    method="POST" style="display: none;">
-                                                    @csrf
-                                                    <input type="hidden" name="user_id" value="{{ $user->id }}">
-                                                    <input type="hidden" name="role" value="customer">
-                                                </form>
-                                            </li>
-                                            @endif
-
 
                                         </ul>
                                     </td>
