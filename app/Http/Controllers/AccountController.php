@@ -76,12 +76,14 @@ class AccountController extends Controller
 
         $profilePicture = $request->file('avatar');
 
-        $filename = time() . '_' . $profilePicture->getClientOriginalName();
-
         $path = $profilePicture->store('avatar', 'public');
+        $storagePath = str_replace('public', '', $path);
 
         $user = auth()->user();
-        $user->avatar = '/storage/avatar/' . $filename;
+        $user->avatar = '/storage/' . $storagePath;
+
+
+
         $user->save();
 
         return redirect('/account');
