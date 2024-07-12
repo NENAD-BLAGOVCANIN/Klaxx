@@ -170,30 +170,6 @@
                         <span>My reviews</span>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link px-0 d-flex align-items-center" href="account-refunds.html">
-                        <svg class="text-gray-600 float-start" width="18px" height="18px" viewBox="0 0 16 16"
-                            xmlns="http://www.w3.org/2000/svg" fill="currentColor">
-                            <path fill-rule="evenodd"
-                                d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z"></path>
-                            <path
-                                d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z">
-                            </path>
-                        </svg>
-                        <span>My refunds</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link px-0 d-flex align-items-center" href="account-addresses.html">
-                        <svg class="text-gray-600 float-start" width="18px" height="18px"
-                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                            <circle cx="12" cy="10" r="3"></circle>
-                        </svg>
-                        <span>My addresses</span>
-                    </a>
-                </li>
                 <li class="nav-item {{ Request::is('account/privacy') ? 'active' : '' }}">
                     <a class="nav-link px-0 d-flex align-items-center" href="/account/privacy">
                         <i class="fa fa-lock pe-1 text-gray-600 float-start"></i>

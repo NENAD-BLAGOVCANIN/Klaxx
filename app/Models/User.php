@@ -14,6 +14,9 @@ class User extends Authenticatable
     const ROLE_CUSTOMER = 'customer';
     const ROLE_ADMIN = 'admin';
 
+    const VISIBILITY_PUBLIC = "public";
+    const VISIBILITY_PRIVATE = "private";
+
     /**
      * The attributes that are mass assignable.
      *

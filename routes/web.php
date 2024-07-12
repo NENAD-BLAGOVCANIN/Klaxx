@@ -21,6 +21,7 @@ Route::middleware('auth')->group(function () {
     Route::post('/account/settings/change-password', [AccountController::class, 'changePassword'])->name('account.change-password');
     Route::post('/account/settings/update-user-avatar', [AccountController::class, 'updateUserAvatar'])->name('account.update-user-avatar');
     Route::get('/account/privacy', [AccountController::class, 'privacy'])->name('account.privacy');
+    Route::post('/account/privacy/set-visibility', [AccountController::class, 'setVisibility'])->name('account.setVisibility');
 
     ### Search
     Route::get('/search', [SearchController::class, 'results'])->name('search.results');

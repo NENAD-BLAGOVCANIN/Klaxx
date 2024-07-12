@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Redirect;
 use Illuminate\View\View;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use app\Models\User;
 
 class AccountController extends Controller
 {
@@ -90,6 +91,19 @@ class AccountController extends Controller
 
     public function privacy(Request $request){
         return view('account.privacy');
+    }
+
+    public function setVisibility(Request $request){
+
+        $user_id = $request->get('user_id');
+        $visibility = $request->get('visibility');
+
+        $user = User::findOrFail($user_id);
+        $user->visibility = $visibility;
+        $user->save();
+
+        return redirect()->back()->with('success','Successfully changed profile visibility');
+
     }
 
     public function update(ProfileUpdateRequest $request): RedirectResponse
