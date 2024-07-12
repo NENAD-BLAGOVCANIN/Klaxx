@@ -102,7 +102,7 @@
         <!-- user list -->
         <div class="section p-0">
 
-            <div class="card-body pt-1">
+            <div class="card-body pt-2 px-2">
 
                 <!-- item list -->
                 <div class="table-responsive-md">
