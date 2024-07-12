@@ -78,7 +78,7 @@ class AccountController extends Controller
 
         $filename = time() . '_' . $profilePicture->getClientOriginalName();
 
-        $profilePicture->storeAs('/images/avatar', $filename, ['disk' => 'public']);
+        $profilePicture->store('/images/avatar', 'public');
 
         $user = auth()->user();
         $user->avatar = '/storage/images/avatar/' . $filename;
