@@ -78,10 +78,10 @@ class AccountController extends Controller
 
         $filename = time() . '_' . $profilePicture->getClientOriginalName();
 
-        $profilePicture->store('/images/avatar', 'public');
+        $path = $profilePicture->store('avatar', 'public');
 
         $user = auth()->user();
-        $user->avatar = '/storage/images/avatar/' . $filename;
+        $user->avatar = '/storage/avatar/' . $filename;
         $user->save();
 
         return redirect('/account');
