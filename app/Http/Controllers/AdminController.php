@@ -31,28 +31,36 @@ class AdminController extends Controller
         return view('admin.users', compact('usersCount', 'users'));
     }
 
-    public function removeUser(Request $request){
+    public function removeUser(Request $request)
+    {
 
         $user_id = $request->get('user_id');
         $user = User::findOrFail($user_id);
 
         $user->delete();
 
-        return redirect()->back()->with('success','User successfully removed');
+        return redirect()->back()->with('success', 'User successfully removed');
 
     }
 
-    public function setRole(Request $request){
-        $user_id = $request->get('user_id');
-        $user = User::findOrFail($user_id);
+    public function setRole(Request $request)
+    {
 
-        $role = $request->get('role');
+        try {
 
-        $user->role = $role;
-        $user->save();
+            $user_id = $request->get('user_id');
+            $user = User::findOrFail($user_id);
 
-        return redirect()->back()->with('success','Successfully changed users role');
+            $role = $request->get('role');
 
+            $user->role = $role;
+            $user->save();
+
+            return redirect()->back()->with('success', 'Successfully changed users role');
+        }
+        catch (\Exception $e) {
+            dd($e);
+        }
     }
 
 
