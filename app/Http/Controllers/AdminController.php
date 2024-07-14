@@ -55,7 +55,7 @@ class AdminController extends Controller
         $user->save();
 
 
-        return redirect()->back()->with('success', 'Successfully changed users role');<<
+        return redirect()->back()->with('success', 'Successfully changed users role');
     
     }
 
