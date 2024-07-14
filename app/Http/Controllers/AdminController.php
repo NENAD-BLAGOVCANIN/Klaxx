@@ -46,23 +46,17 @@ class AdminController extends Controller
     public function setRole(Request $request)
     {
 
-        try {
+        $user_id = $request->get('user_id');
+        $user = User::findOrFail($user_id);
 
-            $user_id = $request->get('user_id');
-            $user = User::findOrFail($user_id);
+        $role = $request->get('role');
 
-            $role = $request->get('role');
+        $user->role = $role;
+        $user->save();
 
-            $user->role = $role;
-            $user->save();
 
-            dd($user);
-
-            return redirect()->back()->with('success', 'Successfully changed users role');
-        }
-        catch (\Exception $e) {
-            dd($e);
-        }
+        return redirect()->back()->with('success', 'Successfully changed users role');<<
+    
     }
 
 
