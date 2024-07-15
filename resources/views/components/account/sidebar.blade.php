@@ -4,6 +4,7 @@
         height: 68px;
         object-fit: cover;
     }
+
     .profile-image-container {
         position: relative;
         display: inline-block;
@@ -67,18 +68,20 @@
             <!-- navbar : navigation -->
             <ul id="nav_responsive" class="nav flex-column d-none d-lg-block mt-1 mt-lg-0">
                 <li>
-                    <form id="profile-form" action="/account/settings/update-user-avatar" method="post" enctype="multipart/form-data">
+                    <form id="profile-form" action="/account/settings/update-user-avatar" method="post"
+                        enctype="multipart/form-data">
                         @csrf
                         <div class="d-flex align-items-center mb-2 pb-4 border-bottom">
 
                             <div class="profile-image-container">
-                                <img src="{{ auth()->user()->avatar }}" class="rounded-circle"
-                                    id="user-profile-photo" alt="" loading="lazy">
+                                <img src="{{ auth()->user()->avatar }}" class="rounded-circle" id="user-profile-photo"
+                                    alt="" loading="lazy">
 
                                 <label for="profile-picture-input" class="hover-text" id="change-picture-label">
                                     <span class="text-center">Change Image</span>
                                 </label>
-                                <input type="file" id="profile-picture-input" name="avatar" class="file-input" accept="image/*">
+                                <input type="file" id="profile-picture-input" name="avatar" class="file-input"
+                                    accept="image/*">
                             </div>
                             <div class="w-100 px-3">
                                 <span>Hello,</span>
@@ -103,8 +106,8 @@
                         <span>My account</span>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link px-0 d-flex align-items-center" href="account-orders.html">
+                <li class="nav-item {{ Request::is('account/orders') ? 'active' : '' }}">
+                    <a class="nav-link px-0 d-flex align-items-center" href="/account/orders">
                         <svg class="text-gray-600 float-start" width="18px" height="18px" viewBox="0 0 16 16"
                             xmlns="http://www.w3.org/2000/svg" fill="currentColor">
                             <path fill-rule="evenodd"
@@ -117,8 +120,8 @@
                         <span>My orders</span>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link px-0 d-flex align-items-center" href="account-favourites.html">
+                <li class="nav-item {{ Request::is('account/favourites') ? 'active' : '' }}">
+                    <a class="nav-link px-0 d-flex align-items-center" href="/account/favourites">
                         <svg class="text-gray-600 float-start" width="18px" height="18px" viewBox="0 0 16 16"
                             xmlns="http://www.w3.org/2000/svg" fill="currentColor">
                             <path fill-rule="evenodd"
@@ -128,8 +131,8 @@
                         <span>Favourites</span>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link px-0 d-flex align-items-center" href="account-reward.html">
+                <li class="nav-item {{ Request::is('account/reward-points') ? 'active' : '' }}">
+                    <a class="nav-link px-0 d-flex align-items-center" href="/account/reward-points">
                         <svg class="text-gray-600 float-start" width="18px" height="18px" viewBox="0 0 16 16"
                             xmlns="http://www.w3.org/2000/svg" fill="currentColor">
                             <path fill-rule="evenodd"
@@ -142,8 +145,8 @@
                         <span>Reward points</span>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link px-0 d-flex align-items-center" href="account-coupons.html">
+                <li class="nav-item {{ Request::is('account/coupons') ? 'active' : '' }}">
+                    <a class="nav-link px-0 d-flex align-items-center" href="/account/coupons">
                         <svg class="text-gray-600 float-start" width="18px" height="18px" viewBox="0 0 16 16"
                             xmlns="http://www.w3.org/2000/svg" fill="currentColor">
                             <path fill-rule="evenodd"
@@ -156,8 +159,8 @@
                         <span>Coupons</span>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link px-0 d-flex align-items-center" href="account-reviews.html">
+                <li class="nav-item {{ Request::is('account/my-reviews') ? 'active' : '' }}">
+                    <a class="nav-link px-0 d-flex align-items-center" href="/account/my-reviews">
                         <svg class="text-gray-600 float-start" width="18px" height="18px" viewBox="0 0 16 16"
                             xmlns="http://www.w3.org/2000/svg" fill="currentColor">
                             <path

@@ -17,6 +17,12 @@ Route::middleware('auth')->group(function () {
 
     ### Account
     Route::get('/account', [AccountController::class, 'index'])->name('account.index');
+    Route::get('/account/orders', [AccountController::class, 'orders'])->name('account.orders');
+    Route::get('/account/favourites', [AccountController::class, 'favourites'])->name('account.favourites');
+    Route::get('/account/reward-points', [AccountController::class, 'rewardPoints'])->name('account.rewardPoints');
+    Route::get('/account/coupons', [AccountController::class, 'coupons'])->name('account.coupons');
+    Route::get('/account/my-reviews', [AccountController::class, 'myReviews'])->name('account.myReviews');
+
     Route::match(['get', 'post'], '/account/settings', [AccountController::class, 'settings'])->name('account.settings');
     Route::post('/account/settings/change-password', [AccountController::class, 'changePassword'])->name('account.change-password');
     Route::post('/account/settings/update-user-avatar', [AccountController::class, 'updateUserAvatar'])->name('account.update-user-avatar');

@@ -20,10 +20,36 @@ class AccountController extends Controller
         return view('account.index');
     }
 
+    public function orders(Request $request): View
+    {
+        return view('account.orders');
+    }
 
-    public function settings(Request $request){
+    public function favourites(Request $request): View
+    {
+        return view('account.favourites');
+    }
 
-        if($request->method () == 'POST'){
+    public function rewardPoints(Request $request): View
+    {
+        return view('account.reward-points');
+    }
+
+    public function coupons(Request $request): View
+    {
+        return view('account.coupons');
+    }
+
+    public function myReviews(Request $request): View
+    {
+        return view('account.my-reviews');
+    }
+
+
+    public function settings(Request $request)
+    {
+
+        if ($request->method() == 'POST') {
             $name = $request->get('name');
             $email = $request->get('email');
             $phone = $request->get('phone');
@@ -39,7 +65,7 @@ class AccountController extends Controller
 
         return view('account.settings');
     }
-    
+
     public function changePassword(Request $request)
     {
 
@@ -48,23 +74,23 @@ class AccountController extends Controller
             'user.user_password' => 'required|string|min:8',
             'user.user_password_new' => 'required|string|min:8|confirmed',
         ]);
-    
+
         if ($validator->fails()) {
             return redirect()->back()->withErrors($validator)->withInput();
         }
-    
+
         // Get the currently authenticated user
         $user = Auth::user();
-    
+
         // Check if the current password matches
         if (!Hash::check($request->input('user.user_password'), $user->password)) {
             return redirect()->back()->with('error', 'Current password is incorrect.');
         }
-    
+
         // Update the user's password
         $user->password = Hash::make($request->input('user.user_password_new'));
         $user->save();
-    
+
         return redirect()->back()->with('success', 'Password changed successfully.');
     }
 
@@ -89,13 +115,15 @@ class AccountController extends Controller
         return redirect('/account');
     }
 
-    
 
-    public function privacy(Request $request){
+
+    public function privacy(Request $request)
+    {
         return view('account.privacy');
     }
 
-    public function setVisibility(Request $request){
+    public function setVisibility(Request $request)
+    {
 
         $user_id = $request->get('user_id');
         $visibility = $request->get('visibility');
@@ -104,7 +132,7 @@ class AccountController extends Controller
         $user->visibility = $visibility;
         $user->save();
 
-        return redirect()->back()->with('success','Successfully changed profile visibility');
+        return redirect()->back()->with('success', 'Successfully changed profile visibility');
 
     }
 
