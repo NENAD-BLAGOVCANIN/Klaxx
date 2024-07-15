@@ -180,7 +180,7 @@
                                 <i class="fi fi-power text-gray-600"></i> <span>Log out</span>
                             </a>
                         @else
-                            <div class="dropdown-header px-4 mb-1 text-wrap fw-medium">Welcome to Klemmes !</div>
+                            <div class="dropdown-header px-4 mb-1 text-wrap fw-medium">Welcome to Vidaki !</div>
 
                             <div class="dropdown-divider"></div>
 
