@@ -224,11 +224,10 @@
                                         <ul class="dropdown-menu dropdown-menu-clean">
                                             <li class="small px-3 py-2 text-muted">Set user</li>
 
-
                                             @if ($user->role == 'customer')
                                                 <li>
                                                     <a class="dropdown-item" href="#"
-                                                        onclick="event.preventDefault(); document.getElementById('admin-role-form').submit();">
+                                                        onclick="event.preventDefault(); document.getElementById('admin-role-form-{{ $user->id }}').submit();">
                                                         <svg xmlns="http://www.w3.org/2000/svg" width="18px"
                                                             height="18px" fill="currentColor"
                                                             class="bi bi-person-check-fill" viewBox="0 0 16 16">
@@ -239,17 +238,18 @@
                                                         </svg>
                                                         <span class="w-100">Assign admin role</span>
                                                     </a>
-                                                    <form id="admin-role-form" action="/admin/users/set-role"
-                                                        method="POST" style="display: none;">
+                                                    <form id="admin-role-form-{{ $user->id }}"
+                                                        action="/admin/users/set-role" method="POST"
+                                                        style="display: none;">
                                                         @csrf
                                                         <input type="hidden" name="user_id" value="{{ $user->id }}">
                                                         <input type="hidden" name="role" value="admin">
                                                     </form>
                                                 </li>
-                                            @else
+                                            @elseif($user->role == 'admin')
                                                 <li>
                                                     <a class="dropdown-item" href="#"
-                                                        onclick="event.preventDefault(); document.getElementById('customer-role-form').submit();">
+                                                        onclick="event.preventDefault(); document.getElementById('customer-role-form-{{ $user->id }}').submit();">
                                                         <svg xmlns="http://www.w3.org/2000/svg" width="18px"
                                                             height="18px" fill="currentColor"
                                                             class="bi bi-person-check-fill" viewBox="0 0 16 16">
@@ -260,10 +260,12 @@
                                                         </svg>
                                                         <span class="w-100">Assign customer role</span>
                                                     </a>
-                                                    <form id="customer-role-form" action="/admin/users/set-role"
-                                                        method="POST" style="display: none;">
+                                                    <form id="customer-role-form-{{ $user->id }}"
+                                                        action="/admin/users/set-role" method="POST"
+                                                        style="display: none;">
                                                         @csrf
-                                                        <input type="hidden" name="user_id" value="{{ $user->id }}">
+                                                        <input type="hidden" name="user_id"
+                                                            value="{{ $user->id }}">
                                                         <input type="hidden" name="role" value="customer">
                                                     </form>
                                                 </li>
@@ -271,7 +273,7 @@
 
                                             <li>
                                                 <a class="dropdown-item" href="#"
-                                                    onclick="event.preventDefault(); document.getElementById('delete-form').submit();">
+                                                    onclick="event.preventDefault(); document.getElementById('delete-form-{{ $user->id }}').submit();">
                                                     <svg class="text-danger" width="18px" height="18px"
                                                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                                                         fill="none" stroke="currentColor" stroke-width="2"
@@ -287,7 +289,8 @@
                                                     </svg>
                                                     <span class="w-100">Delete</span>
                                                 </a>
-                                                <form id="delete-form" action="/admin/users/remove-user" method="POST"
+                                                <form id="delete-form-{{ $user->id }}"
+                                                    action="/admin/users/remove-user" method="POST"
                                                     style="display: none;">
                                                     @csrf
                                                     <input type="hidden" name="user_id" value="{{ $user->id }}">
@@ -298,6 +301,7 @@
                                     </td>
                                 </tr>
                             @endforeach
+
 
                         </tbody>
                     </table>

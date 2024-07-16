@@ -47,6 +47,7 @@ class AdminController extends Controller
     {
 
         $user_id = $request->get('user_id');
+
         $user = User::findOrFail($user_id);
 
         $role = $request->get('role');
