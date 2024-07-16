@@ -63,7 +63,7 @@
             <div class="col-5 col-sm-3 col-md-3 col-lg-2 text-center">
                 <a class="text-decoration-none">
                     <img class="img-fluid bg-suprime"
-                        src="demo.files/images/unsplash/products/thumb_330/imani-clovis-LxVxPA1LOVM-unsplash-min.jpg"
+                        src="/images/unsplash/products/thumb_330/imani-clovis-LxVxPA1LOVM-unsplash-min.jpg"
                         alt="...">
                 </a>
             </div>
@@ -127,7 +127,7 @@
             <div class="col-5 col-sm-3 col-md-3 col-lg-2 text-center">
                 <a class="text-decoration-none">
                     <img class="img-fluid bg-suprime"
-                        src="demo.files/images/unsplash/products/thumb_330/aidan-hancock-UtzrcidfCsk-unsplash-min.jpg"
+                        src="/images/unsplash/products/thumb_330/aidan-hancock-UtzrcidfCsk-unsplash-min.jpg"
                         alt="...">
                 </a>
             </div>
@@ -190,7 +190,7 @@
             <div class="col-5 col-sm-3 col-md-3 col-lg-2 text-center">
                 <a class="text-decoration-none">
                     <img class="img-fluid bg-suprime"
-                        src="demo.files/images/unsplash/products/thumb_330/hardik-sharma-CrPAvN29Nhs-unsplash-min.jpg"
+                        src="/images/unsplash/products/thumb_330/hardik-sharma-CrPAvN29Nhs-unsplash-min.jpg"
                         alt="...">
                 </a>
             </div>
