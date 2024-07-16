@@ -11,7 +11,7 @@ class AdminController extends Controller
     public function dashboard()
     {
 
-        if (!auth()->user()->role == "admin") {
+        if (auth()->user()->role != "admin") {
             return abort(403, 'Access Denied');
         }
 
@@ -21,7 +21,7 @@ class AdminController extends Controller
     public function users()
     {
 
-        if (!auth()->user()->role == "admin") {
+        if (auth()->user()->role != "admin") {
             return abort(403, 'Access Denied');
         }
 
@@ -56,7 +56,7 @@ class AdminController extends Controller
 
 
         return redirect()->back()->with('success', 'Successfully changed users role');
-    
+
     }
 
 
