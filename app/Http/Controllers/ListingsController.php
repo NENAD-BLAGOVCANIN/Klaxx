@@ -46,12 +46,14 @@ class ListingsController extends Controller
             $validatedData = $request->validate([
                 'title' => 'required|max:255',
                 'price' => 'required|numeric',
+                'keywords' => 'nullable|string',
                 'category_id' => 'required|exists:categories,id',
             ]);
 
             $listing = new Listing();
             $listing->title = $validatedData['title'];
             $listing->price = $validatedData['price'];
+            $listing->keywords = $validatedData['keywords'];
             $listing->user_id = auth()->user()->id;
             $listing->category_id = $validatedData['category_id'];
 
