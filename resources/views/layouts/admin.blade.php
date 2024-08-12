@@ -30,6 +30,8 @@
 
         <div id="wrapper_content" class="d-flex flex-fill">
 
+            @include('admin.components.sidebar')
+
             @yield('content')
 
         </div>

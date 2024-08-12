@@ -5,8 +5,6 @@
 @section('content')
 
 
-    @include('admin.components.sidebar')
-
     <!-- main -->
     <main id="middle" class="flex-fill mx-auto">
 

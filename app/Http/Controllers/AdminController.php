@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Listing;
 
 class AdminController extends Controller
 {
@@ -57,6 +58,19 @@ class AdminController extends Controller
 
 
         return redirect()->back()->with('success', 'Successfully changed users role');
+
+    }
+
+
+    public function listings(Request $request){
+        if (auth()->user()->role != "admin") {
+            return abort(403, 'Access Denied');
+        }
+
+        $active_listings = Listing::where('status', '=', Listing::STATUS_ACTIVE)->get();
+        $pending_approval_listings = Listing::where('status', '=', Listing::STATUS_PENDING_APPROVAL)->get();
+
+        return view('admin.listings', compact('active_listings', 'pending_approval_listings'));
 
     }
 
