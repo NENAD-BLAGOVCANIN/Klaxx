@@ -10,7 +10,10 @@ class Listing extends Model
     use HasFactory;
 
     const STATUS_DRAFT = 'draft';
+    const STATUS_PENDING_APPROVAL = 'pending_approval';
     const STATUS_ACTIVE = 'active';
+    const STATUS_EXPIRED = 'expired';
+    const STATUS_DENIED = 'denied';
 
     public function category()
     {

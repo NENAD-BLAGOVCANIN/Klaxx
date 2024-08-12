@@ -35,9 +35,13 @@ class ListingsController extends Controller
     public function myListings(Request $request)
     {
 
-        $listings = Listing::where('user_id', auth()->user()->id)->get();
+        $active_listings = Listing::where('user_id', auth()->user()->id)->where('status', '=', Listing::STATUS_ACTIVE)->get();
+        $pending_listings = Listing::where('user_id', auth()->user()->id)->where('status', '=', Listing::STATUS_PENDING_APPROVAL)->get();
+        $expired_listings = Listing::where('user_id', auth()->user()->id)->where('status', '=', Listing::STATUS_EXPIRED)->get();
+        $denied_listings = Listing::where('user_id', auth()->user()->id)->where('status', '=', Listing::STATUS_DENIED)->get();
+        $draft_listings = Listing::where('user_id', auth()->user()->id)->where('status', '=', Listing::STATUS_DRAFT)->get();
 
-        return view('listings.myListings', compact('listings'));
+        return view('listings.myListings', compact('active_listings', 'pending_listings', 'expired_listings', 'denied_listings', 'draft_listings'));
     }
     public function create(Request $request)
     {
@@ -160,7 +164,7 @@ class ListingsController extends Controller
     public function publish(Request $request, $listing_id)
     {
         $listing = Listing::findOrFail($listing_id);
-        $listing->status = Listing::STATUS_ACTIVE;
+        $listing->status = Listing::STATUS_PENDING_APPROVAL;
         $listing->save();
 
         return redirect('/my-listings')->with('success', 'Successfully published your listing!');
