@@ -67,6 +67,14 @@ class AdminController extends Controller
             return abort(403, 'Access Denied');
         }
 
+        if ($request->isMethod('post')) {
+
+            $listing = Listing::findOrFail($request->get('listing_id'));
+            $listing->status = $request->get('status');
+            $listing->save();
+
+        }
+
         $active_listings = Listing::where('status', '=', Listing::STATUS_ACTIVE)->get();
         $pending_approval_listings = Listing::where('status', '=', Listing::STATUS_PENDING_APPROVAL)->get();
 

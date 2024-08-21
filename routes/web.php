@@ -48,7 +48,7 @@ Route::prefix('admin')->group(function () {
     Route::post('/users/remove-user', [AdminController::class, 'removeUser'])->name('admin.removeUser');
     Route::post('/users/set-role', [AdminController::class, 'setRole'])->name('admin.setRole');
 
-    Route::get('/listings', [AdminController::class, 'listings'])->name('admin.listings');
+    Route::match(['get', 'post'], '/listings', [AdminController::class, 'listings'])->name('admin.listings');
 
 
 });

@@ -153,7 +153,7 @@
                 </div>
                 @empty
                 <div class="py-5">
-                    <span class="text-muted text-center m-auto d-block py-5">😔 No active listings currently
+                    <span class="text-muted text-center m-auto d-block py-5">No active listings currently
                         yet!</span>
                 </div>
                 @endforelse
@@ -280,7 +280,7 @@
                 </div>
                 @empty
                 <div class="py-5">
-                    <span class="text-muted text-center m-auto d-block py-5">😔No pending listings currently
+                    <span class="text-muted text-center m-auto d-block py-5">No pending listings currently
                         yet!</span>
                 </div>
                 @endforelse
