@@ -306,50 +306,18 @@
                                 </a>
                             </figure>
 
-                            <!-- desktop : compare+save -->
-                            <div class="clearfix pt-2 hidden-md-down">
-
-                                <label class="form-checkbox form-checkbox-danger m-0">
-                                    <input type="checkbox" name="checkbox_p">
-                                    <i></i> Compare
-                                </label>
-
-                                <a href="#" class="btn btn-sm m-0 p-0 text-muted">
-                                    <i class="fi fi-heart-slim float-start fs-6"></i>
-                                    <span class="d-inline-block">Save</span>
-                                </a>
-
-                            </div>
-
                         </div>
 
                         <div class="col-6 col-md-3 order-xs-2 order-md-3 order-lg-3 p--0">
 
-                            <span
-                                class="btn btn-sm w-100 bg-primary text-white text-center mb-2 fs-6 d-none d-lg-block">
-                                <i class="fi fi-star"></i>
-                                Featured
-                            </span>
-
-                            <ul class="bg-light h-100-xs p-3 list-unstyled rounded mb-2 fs-6 text-muted">
-                                <li class="small">
-                                    <i class="fi fi-check float-start"></i> good condition
-                                </li>
-                                <li class="small">
-                                    <i class="fi fi-check float-start"></i> refund
-                                </li>
-                                <li class="small">
-                                    <i class="fi fi-check float-start"></i> lorem
-                                </li>
-                                <li class="small">
-                                    <i class="fi fi-close float-start"></i> ipsum
-                                </li>
-                            </ul>
-
-                            <a href="#" class="btn btn-sm w-100 btn-warning fs-6 m-0 d-none d-lg-block">
-                                <i class="fi fi-phone"></i>
-                                Contact Seller
-                            </a>
+                            <form action="/listings/{{ $listing->id }}/renew" method="POST">
+                                @csrf
+                                <button type="submit"
+                                    class="btn btn-sm w-100 bg-primary text-white text-center mb-2 fs-6 d-none d-lg-block">
+                                    Renew
+                                </button>
+                            </form>
+                            
 
                         </div>
 

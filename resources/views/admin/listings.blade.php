@@ -139,7 +139,7 @@
 
             <div class="row">
                 @forelse ($active_listings as $listing)
-                    <div class="shadow-xs rounded mb-4 p-3">
+                    <div class="shadow-xs bg-white rounded mb-4 p-3">
 
                         <div class="row g-0">
 

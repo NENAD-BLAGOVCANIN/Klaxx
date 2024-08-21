@@ -171,4 +171,13 @@ class ListingsController extends Controller
 
     }
 
+    public function renewListing(Request $request, $id){
+        $listing = Listing::findOrFail($id);
+        $listing->status = Listing::STATUS_ACTIVE;
+        $listing->save();
+
+        return redirect()->back()->with('success', 'Successfully renewed your listing!');
+
+    }
+
 }
