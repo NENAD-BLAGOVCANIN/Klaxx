@@ -12,6 +12,8 @@ use App\Http\Controllers\SearchController;
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/categories/{category_id}', [CategoryController::class, 'show'])->name('category.show');
 
+### Search
+Route::get('/search', [SearchController::class, 'results'])->name('search.results');
 
 Route::middleware('auth')->group(function () {
 
@@ -28,9 +30,6 @@ Route::middleware('auth')->group(function () {
     Route::post('/account/settings/update-user-avatar', [AccountController::class, 'updateUserAvatar'])->name('account.update-user-avatar');
     Route::get('/account/privacy', [AccountController::class, 'privacy'])->name('account.privacy');
     Route::post('/account/privacy/set-visibility', [AccountController::class, 'setVisibility'])->name('account.setVisibility');
-
-    ### Search
-    Route::get('/search', [SearchController::class, 'results'])->name('search.results');
 
     Route::get('/listings/view/{listing_id}', [ListingsController::class, 'view'])->name('listings.view');
     Route::get('/my-listings', [ListingsController::class, 'myListings'])->name('listings.myListings');
