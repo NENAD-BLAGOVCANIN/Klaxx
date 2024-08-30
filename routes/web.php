@@ -15,6 +15,8 @@ Route::get('/categories/{category_id}', [CategoryController::class, 'show'])->na
 ### Search
 Route::get('/search', [SearchController::class, 'results'])->name('search.results');
 
+Route::get('/listings/view/{listing_id}', [ListingsController::class, 'view'])->name('listings.view');
+
 Route::middleware('auth')->group(function () {
 
     ### Account
@@ -31,7 +33,6 @@ Route::middleware('auth')->group(function () {
     Route::get('/account/privacy', [AccountController::class, 'privacy'])->name('account.privacy');
     Route::post('/account/privacy/set-visibility', [AccountController::class, 'setVisibility'])->name('account.setVisibility');
 
-    Route::get('/listings/view/{listing_id}', [ListingsController::class, 'view'])->name('listings.view');
     Route::get('/my-listings', [ListingsController::class, 'myListings'])->name('listings.myListings');
     Route::match(['get', 'post'], '/listings/create', [ListingsController::class, 'create'])->name('listings.create');
     Route::match(['get', 'post'], '/listings/{listing_id}/attributes', [ListingsController::class, 'updateAttributes'])->name('listings.updateAttributes');
