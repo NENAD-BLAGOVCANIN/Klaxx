@@ -24,7 +24,11 @@
                     </h1>
 
                     <figure class="mb-5">
-                        <img class="img-fluid" src="{{ $listing->images[0]->image_path }}" alt="...">
+                        @if ($listing->images->isNotEmpty())
+                            <img class="img-fluid" src="{{ $listing->images[0]->image_path }}" alt="...">
+                        @else
+                            <img class="img-fluid lazy" src="/images/various/no-image.jpg" alt="No Image">
+                        @endif
                     </figure>
 
                     <h2 class="h5">Seller's Comments</h2>
