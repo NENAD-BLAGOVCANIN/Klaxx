@@ -9,7 +9,7 @@ use Carbon\Carbon;
 class ExpireListings extends Command
 {
     protected $signature = 'listings:expire';
-    protected $description = 'Check for listings older than 5 minutes and mark them as expired';
+    protected $description = 'Check for listings older than 90 days and mark them as expired';
 
     public function __construct()
     {
@@ -26,6 +26,6 @@ class ExpireListings extends Command
             ->where('status', '!=', 'expired')
             ->update(['status' => 'expired']);
 
-        $this->info('Listings older than 5 minutes have been marked as expired.');
+        $this->info('Listings older than 90 days have been marked as expired.');
     }
 }
