@@ -20,7 +20,7 @@ class ExpireListings extends Command
     {
         \Log::info('Checking for expired listings');
 
-        $expiredTime = Carbon::now()->subMinutes(5);
+        $expiredTime = Carbon::now()->subDays(90);
 
         Listing::where('created_at', '<=', $expiredTime)
             ->where('status', '!=', 'expired')
